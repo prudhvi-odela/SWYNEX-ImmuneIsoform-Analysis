@@ -1,0 +1,7 @@
+Project: SWYNEX ImmuneIsoform Analysis
+Dataset accession: GSE297994
+Repository: NCBI Gene Expression Omnibus
+Organism: Homo sapiens
+Research area: Long-read RNA sequencing
+Research question: How does immune activation affect transcript isoform abundance?
+Official dataset: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE297994
