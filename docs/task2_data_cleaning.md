@@ -16,6 +16,7 @@ The script uses Python 3.9+ and its standard library only. It writes normalized 
 
 ## Cleaning decisions
 
+- If the first header cell is blank (a common representation of row names), label that identifier column `feature_id`; reject other blank or duplicate column names.
 - Decode UTF-8 (including an optional byte-order mark) and parse tab-separated fields.
 - Trim surrounding whitespace from headers and cells; omit fully blank rows.
 - Preserve missing cells as empty fields; do not impute values.
