@@ -1,40 +1,161 @@
-# SWYNEX Immune Isoform Analysis
+🧬 SWYNEX Bioinformatics Internship
 
-A reproducible bioinformatics project built around NCBI GEO **GSE297994**, a human monocyte RNA-sequencing study of ex vivo and lipopolysaccharide (LPS)-activated conditions. This repository currently documents **Task 1: dataset selection and feasibility**. It does not claim that differential expression, isoform, or any other analyses have been run.
+Biological Dataset Selection & Immune Isoform Analysis
 
-## Selected dataset
+Organization: SWYNEX Technologies
+Domain: Bioinformatics
+Current Task: Task 1 — Biological Dataset Selection
+Project Status: Dataset selection and documentation
 
-**Native long-read RNA sequencing of human monocytes reveals activation-induced alternative splicing toward functional isoforms** ([GSE297994](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE297994)) studies primary human monocytes before and after 3-hour in-vitro LPS stimulation. GEO lists 22 samples across two sequencing platforms:
+---
 
-| Assay | Ex vivo | 3 h LPS | Platform |
-|---|---:|---:|---|
-| Short-read bulk RNA-seq | 8 healthy volunteers | 8 healthy volunteers | Illumina NextSeq 500, single-end 75 bp |
-| Native long-read RNA-seq | 3 healthy volunteers | 3 healthy volunteers | Oxford Nanopore MinION |
+📌 1. Project Overview
 
-The combination is relevant to immune activation and transcript isoform abundance: short reads provide broader sample coverage while long reads support transcript-level characterization. The study’s paper reports activation-associated isoform switching and describes the deposited data; those published findings are background, not results produced by this repository.
+This repository documents my work during the SWYNEX Technologies Bioinformatics Internship.
 
-## Data footprint (snapshot: 2026-10-22)
+The first task focuses on selecting a publicly available biological dataset, documenting its source and size, understanding its experimental design, and defining a biologically relevant research question.
 
-- **Processed GEO supplementary tables:** 4 files, **4,662,174 bytes total** (about 4.45 MB decimal; 4.44 MiB), compressed.
-- **Raw FASTQ files listed by ENA:** 22 runs, **16,631,011,185 bytes total** (about 16.63 GB decimal; 15.49 GiB), compressed. No raw reads were downloaded for Task 1.
+The selected dataset is GSE297994, a human monocyte RNA-sequencing study investigating activation-associated changes in transcript isoforms.
 
-See [docs/data_access.md](docs/data_access.md) for the files, exact sizes, sources, and access notes. The GEO processed tables are small enough for a later workflow; raw reads require substantially more storage and transfer time.
+This repository currently documents dataset selection and feasibility. Future internship tasks will be added as separate sections or folders according to their assigned requirements.
 
-## Task 1 deliverables
+🔬 2. Selected Biological Dataset
 
-- [Dataset selection rationale and design](docs/dataset_selection.md)
-- [Sample group inventory](docs/sample_manifest.md)
-- [Data files, sizes, and access plan](docs/data_access.md)
+Attribute| Details
+Dataset accession| GSE297994
+Repository| NCBI Gene Expression Omnibus (GEO)
+Organism| Homo sapiens
+Biological material| Human monocytes
+Research area| RNA sequencing and immune activation
+Short-read platform| Illumina NextSeq 500
+Long-read platform| Oxford Nanopore MinION
+Associated BioProject| PRJNA1267092
 
-## Scope and limitations
+Official Data Sources
 
-This repository records metadata-based dataset selection only. No reads or count tables have been downloaded, quality checked, normalized, statistically tested, or analyzed here. No biological conclusions are asserted. Before a downstream comparison, inspect the sample-level metadata and define the analysis population, donor structure, and assay-specific comparisons. Do not assume that the short- and long-read samples are all matched across donors.
+- "NCBI GEO — GSE297994" (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE297994)
+- "NCBI BioProject — PRJNA1267092" (https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1267092)
 
-## Sources
+📊 3. Experimental Design
 
-- NCBI GEO Series record: [GSE297994](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE297994)
-- NCBI SRA Run Selector: [PRJNA1267092](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA1267092)
-- ENA run manifest and FASTQ byte counts: [ENA Portal API](https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJNA1267092&result=read_run&fields=run_accession%2Csample_accession%2Cexperiment_accession%2Cinstrument_platform%2Clibrary_strategy%2Cfastq_bytes&format=tsv)
-- Bodelón et al. *Nature Communications* (2026), [article and DOI](https://doi.org/10.1038/s41467-026-73661-5)
+The documented study contains 22 samples across two RNA-sequencing approaches.
 
-Metadata and file sizes can change. Recheck the linked NCBI/ENA records before downloading or beginning analysis.
+Assay| Ex vivo| 3-hour LPS activation| Platform
+Short-read bulk RNA-seq| 8 samples| 8 samples| Illumina NextSeq 500, single-end 75 bp
+Native long-read RNA-seq| 3 samples| 3 samples| Oxford Nanopore MinION
+Total| 11| 11| Two sequencing approaches
+
+The experimental conditions allow investigation of changes associated with lipopolysaccharide (LPS)-induced immune activation.
+
+Important: The sample counts describe the study design. Donor matching across sequencing approaches must be verified from the original metadata before conducting paired comparisons.
+
+💾 4. Dataset Size and Data Availability
+
+Processed supplementary files
+
+The four documented processed GEO supplementary files have a combined size of 4,662,174 bytes (approximately 4.66 MB decimal).
+
+Data category| File type| Number of files
+Raw count tables| Compressed text (".txt.gz")| 2
+Salmon abundance tables| Compressed text (".txt.gz")| 2
+Total| | 4
+
+Raw sequencing archive
+
+The associated sequencing archive lists 22 runs with a combined reported size of approximately 16.63 GB decimal.
+
+The raw sequencing reads have not been downloaded for Task 1. The reported archive size is based on available run metadata, not on a local download or completed analysis.
+
+For individual file sizes and access details, see ""docs/data_access.md"" (docs/data_access.md).
+
+❓ 5. Research Question
+
+How does LPS-induced immune activation affect RNA transcript isoform abundance in human monocytes, and how can short-read and native long-read RNA sequencing provide complementary information about these changes?
+
+Biological Significance
+
+Immune activation can influence gene expression and RNA processing. Investigating transcript abundance and isoform usage can help characterize these changes.
+
+Short-read RNA sequencing provides gene- and transcript-level measurements, while long-read sequencing can help characterize longer transcript structures. Together, these approaches offer complementary perspectives on transcriptome changes.
+
+This research question motivates potential downstream analysis. It is not a claim that new biological findings have been generated in this repository.
+
+🎯 6. Why This Dataset Was Selected
+
+The dataset was selected because:
+
+- It is publicly available through NCBI GEO.
+- It addresses a relevant biological question involving immune activation.
+- It includes short-read and native long-read RNA sequencing.
+- Its experimental design and sample counts can be documented.
+- Its available processed data and archive metadata provide a basis for planning future computational work.
+
+🛠️ 7. Potential Downstream Applications
+
+Depending on the requirements of subsequent internship tasks, future work may include:
+
+1. Reviewing sample metadata and experimental design.
+2. Assessing sequencing data quality.
+3. Preparing and processing RNA-seq data.
+4. Examining gene expression and transcript isoform abundance.
+5. Creating visualizations and interpreting results.
+6. Documenting methods, findings, and limitations.
+
+These are proposed future activities. They should not be interpreted as analyses already completed.
+
+⚠️ 8. Limitations and Considerations
+
+- The native long-read dataset contains three samples per condition.
+- Donor matching between sequencing approaches must be verified before paired comparisons.
+- Short-read and long-read quantification methods may produce different measurements.
+- Raw sequencing data have not been downloaded or independently processed for Task 1.
+- No new quality control, normalization, differential expression analysis, statistical testing, or independent biological validation has been performed as part of this task.
+- Published study findings are background information and are not results generated by this repository.
+
+📁 9. Repository Structure
+
+SWYNEX-ImmuneIsoform-Analysis/
+│
+├── README.md
+├── PROJECT_LOG.md
+├── .gitignore
+│
+├── docs/
+│   ├── dataset_selection.md
+│   ├── data_access.md
+│   └── sample_manifest.md
+│
+├── metadata/
+├── data/
+│   └── processed/
+└── scripts/
+
+The existing documentation provides additional details about dataset selection, data access, and sample metadata. New task-specific files will be added as the internship progresses and requirements become available.
+
+📚 10. Task Progress
+
+Deliverable| Status
+Select a public biological dataset| Completed
+Document the dataset source and accession| Documented
+Document sample counts and data availability| Documented
+Define a research question| Completed
+Publish LinkedIn explanation post| Pending confirmation
+Submit Task 1 for review| Pending confirmation
+Receive reviewer approval| Awaiting confirmation
+Subsequent internship tasks| Not started
+
+This table reflects the current project documentation. Official task completion remains subject to SWYNEX reviewer approval.
+
+👨‍💻 11. About Me
+
+Prudhvi Teja Odela
+Bioinformatics Undergraduate | Vignan University
+
+My interests include genomics, transcriptomics, RNA sequencing, and computational biology. Through this internship, I aim to strengthen my practical skills and maintain a structured, reproducible record of my bioinformatics work.
+
+- "GitHub Profile" (https://github.com/prudhvi-odela)
+- "LinkedIn Profile" (https://www.linkedin.com/in/prudhvi-teja-odela/)
+
+---
+
+Disclaimer: This repository documents dataset selection and planning for Task 1. Potential future analyses are not presented as completed work or original research findings.
