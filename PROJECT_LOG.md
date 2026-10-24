@@ -33,5 +33,12 @@ Develop a reproducible bioinformatics workflow to investigate how immune activat
 - Build and validate the analysis workflow.
 - Document results and limitations before public release.
 
+## Task 2 — Data cleaning and basic analysis (2026-10-24)
+- Ran `scripts/clean_and_summarize.py` against all four checked-in processed GEO tables using Python 3.12.14.
+- Wrote whitespace-normalized, uncompressed copies to `data/cleaned/` and descriptive quality metrics to `results/task2_data_summary.json`; the original compressed files in `data/processed/` were unchanged.
+- All tables had consistent row widths, no blank rows or empty cells, and no nonnumeric or negative values in quantitative columns.
+- The long-read raw-count table has repeated `gene_id` annotations across transcript rows. Its separate `ids` column was used as the row-level identifier; no rows were dropped or aggregated.
+- No normalization, differential testing, or biological interpretation was performed.
+
 ## Dataset source
 https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE297994

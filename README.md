@@ -153,3 +153,5 @@ This repository documents dataset selection and planning for Task 1. Future anal
 A reproducible Python workflow checks and standardizes the four processed GSE297994 tables, preserves the compressed sources, and reports table structure, missing values, duplicate feature IDs, and per-column descriptive statistics. See [the Task 2 methods and run instructions](docs/task2_data_cleaning.md) and [the analysis script](scripts/clean_and_summarize.py).
 
 Run `python scripts/clean_and_summarize.py` from the repository root to create cleaned copies and a JSON summary.
+
+The workflow ran on all four processed tables. It found no empty cells, malformed rows, duplicate row-level feature IDs, or invalid numeric values. The long-read raw-count table has 16,439 repeated `gene_id` annotations across transcript rows; its unique row-level IDs were preserved. Detailed results are in [the Task 2 report](docs/task2_data_cleaning.md) and [JSON summary](results/task2_data_summary.json).

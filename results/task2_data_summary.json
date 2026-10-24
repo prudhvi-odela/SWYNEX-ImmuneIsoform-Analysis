@@ -1,0 +1,765 @@
+{
+  "dataset": "NCBI GEO GSE297994",
+  "generated_by": "scripts/clean_and_summarize.py",
+  "files": [
+    {
+      "source": "data/processed/long_read_raw_counts.txt.gz",
+      "cleaned_copy": "data/cleaned/long_read_raw_counts.txt",
+      "rows": 24894,
+      "columns": 8,
+      "feature_id_column": "ids",
+      "duplicate_feature_ids": 0,
+      "missing_feature_ids": 0,
+      "blank_rows_removed": 0,
+      "repeated_first_column_values": 16439,
+      "empty_cells": 0,
+      "columns_detail": [
+        {
+          "name": "gene_id",
+          "nonempty_cells": 24894
+        },
+        {
+          "name": "ids",
+          "nonempty_cells": 24894
+        },
+        {
+          "name": "HC3exvivo_Nanopore",
+          "nonempty_cells": 24894
+        },
+        {
+          "name": "HC3LPS_Nanopore",
+          "nonempty_cells": 24894
+        },
+        {
+          "name": "HC1exvivo_Nanopore",
+          "nonempty_cells": 24894
+        },
+        {
+          "name": "HC1LPS_Nanopore",
+          "nonempty_cells": 24894
+        },
+        {
+          "name": "HC2exvivo_Nanopore",
+          "nonempty_cells": 24894
+        },
+        {
+          "name": "HC2LPS_Nanopore",
+          "nonempty_cells": 24894
+        }
+      ],
+      "annotation_columns": [
+        {
+          "column": "ids",
+          "nonempty_cells": 24894,
+          "distinct_non_numeric_values": 24894,
+          "selected_as_feature_id": true
+        }
+      ],
+      "numeric_column_summaries": [
+        {
+          "column": "HC3exvivo_Nanopore",
+          "nonempty_cells": 24894,
+          "n": 24894,
+          "min": 0.0,
+          "max": 5554.0,
+          "zero": 8683,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 13.218285530649956
+        },
+        {
+          "column": "HC3LPS_Nanopore",
+          "nonempty_cells": 24894,
+          "n": 24894,
+          "min": 0.0,
+          "max": 35293.0,
+          "zero": 3592,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 39.24451675102434
+        },
+        {
+          "column": "HC1exvivo_Nanopore",
+          "nonempty_cells": 24894,
+          "n": 24894,
+          "min": 0.0,
+          "max": 16058.0,
+          "zero": 2104,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 51.79119466538122
+        },
+        {
+          "column": "HC1LPS_Nanopore",
+          "nonempty_cells": 24894,
+          "n": 24894,
+          "min": 0.0,
+          "max": 37572.0,
+          "zero": 2637,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 44.032578131276615
+        },
+        {
+          "column": "HC2exvivo_Nanopore",
+          "nonempty_cells": 24894,
+          "n": 24894,
+          "min": 0.0,
+          "max": 9770.0,
+          "zero": 3310,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 30.266007873383145
+        },
+        {
+          "column": "HC2LPS_Nanopore",
+          "nonempty_cells": 24894,
+          "n": 24894,
+          "min": 0.0,
+          "max": 29372.0,
+          "zero": 3459,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 35.08636619265687
+        }
+      ],
+      "cleaning_policy": "Trim surrounding whitespace and omit fully blank rows. Preserve source files, duplicate IDs, and empty cells. Reject inconsistent row widths."
+    },
+    {
+      "source": "data/processed/long_read_salmon_abundance.txt.gz",
+      "cleaned_copy": "data/cleaned/long_read_salmon_abundance.txt",
+      "rows": 24939,
+      "columns": 7,
+      "feature_id_column": "isoform_id",
+      "duplicate_feature_ids": 0,
+      "missing_feature_ids": 0,
+      "blank_rows_removed": 0,
+      "repeated_first_column_values": 0,
+      "empty_cells": 0,
+      "columns_detail": [
+        {
+          "name": "isoform_id",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC3exvivo_Nanopore_salmon_quant",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC3LPS_Nanopore_salmon_quant",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC1exvivo_Nanopore_salmon_quant",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC1LPS_Nanopore_salmon_quant",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC2exvivo_Nanopore_salmon_quant",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC2LPS_Nanopore_salmon_quant",
+          "nonempty_cells": 24939
+        }
+      ],
+      "annotation_columns": [],
+      "numeric_column_summaries": [
+        {
+          "column": "HC3exvivo_Nanopore_salmon_quant",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 6362.12172190742,
+          "zero": 3623,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 27.43582593236706
+        },
+        {
+          "column": "HC3LPS_Nanopore_salmon_quant",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 21406.7382744675,
+          "zero": 1530,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 54.52663168922612
+        },
+        {
+          "column": "HC1exvivo_Nanopore_salmon_quant",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 8985.56679324575,
+          "zero": 1603,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 31.655322557253204
+        },
+        {
+          "column": "HC1LPS_Nanopore_salmon_quant",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 31261.6322102929,
+          "zero": 1665,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 55.70682767488998
+        },
+        {
+          "column": "HC2exvivo_Nanopore_salmon_quant",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 6707.94478520741,
+          "zero": 2111,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 29.82776443067675
+        },
+        {
+          "column": "HC2LPS_Nanopore_salmon_quant",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 23305.6046053878,
+          "zero": 2081,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 52.8230171329369
+        }
+      ],
+      "cleaning_policy": "Trim surrounding whitespace and omit fully blank rows. Preserve source files, duplicate IDs, and empty cells. Reject inconsistent row widths."
+    },
+    {
+      "source": "data/processed/short_read_raw_counts.txt.gz",
+      "cleaned_copy": "data/cleaned/short_read_raw_counts.txt",
+      "rows": 63140,
+      "columns": 17,
+      "feature_id_column": "gene_id",
+      "duplicate_feature_ids": 0,
+      "missing_feature_ids": 0,
+      "blank_rows_removed": 0,
+      "repeated_first_column_values": 0,
+      "empty_cells": 0,
+      "columns_detail": [
+        {
+          "name": "gene_id",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC1exvivo",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC2exvivo",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC3exvivo",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC4exvivo",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC5exvivo",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC6exvivo",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC7exvivo",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC8exvivo",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC1LPS",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC2LPS",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC3LPS",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC4LPS",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC5LPS",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC6LPS",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC7LPS",
+          "nonempty_cells": 63140
+        },
+        {
+          "name": "HC8LPS",
+          "nonempty_cells": 63140
+        }
+      ],
+      "annotation_columns": [],
+      "numeric_column_summaries": [
+        {
+          "column": "HC1exvivo",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 113787.0,
+          "zero": 44124,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 111.85611339879632
+        },
+        {
+          "column": "HC2exvivo",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 98122.0,
+          "zero": 43822,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 113.41173582515046
+        },
+        {
+          "column": "HC3exvivo",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 127694.0,
+          "zero": 43228,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 157.5538802660754
+        },
+        {
+          "column": "HC4exvivo",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 185306.0,
+          "zero": 43034,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 197.33824833702883
+        },
+        {
+          "column": "HC5exvivo",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 99384.0,
+          "zero": 45070,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 120.60693696547355
+        },
+        {
+          "column": "HC6exvivo",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 207294.0,
+          "zero": 44530,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 100.0696705733291
+        },
+        {
+          "column": "HC7exvivo",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 213062.0,
+          "zero": 44352,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 150.70324675324676
+        },
+        {
+          "column": "HC8exvivo",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 176211.0,
+          "zero": 43487,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 148.3545771301869
+        },
+        {
+          "column": "HC1LPS",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 424773.0,
+          "zero": 44490,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 131.48731390560658
+        },
+        {
+          "column": "HC2LPS",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 355326.0,
+          "zero": 44491,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 126.04060817231549
+        },
+        {
+          "column": "HC3LPS",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 415737.0,
+          "zero": 43189,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 150.16040544821033
+        },
+        {
+          "column": "HC4LPS",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 298160.0,
+          "zero": 44612,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 144.85964523281598
+        },
+        {
+          "column": "HC5LPS",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 488982.0,
+          "zero": 45064,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 141.00405448210327
+        },
+        {
+          "column": "HC6LPS",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 413468.0,
+          "zero": 48744,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 97.03441558441558
+        },
+        {
+          "column": "HC7LPS",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 127919.0,
+          "zero": 44359,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 42.89136838770985
+        },
+        {
+          "column": "HC8LPS",
+          "nonempty_cells": 63140,
+          "n": 63140,
+          "min": 0.0,
+          "max": 553043.0,
+          "zero": 45793,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 169.82956921127652
+        }
+      ],
+      "cleaning_policy": "Trim surrounding whitespace and omit fully blank rows. Preserve source files, duplicate IDs, and empty cells. Reject inconsistent row widths."
+    },
+    {
+      "source": "data/processed/short_read_salmon_abundance.txt.gz",
+      "cleaned_copy": "data/cleaned/short_read_salmon_abundance.txt",
+      "rows": 24939,
+      "columns": 17,
+      "feature_id_column": "isoform_id",
+      "duplicate_feature_ids": 0,
+      "missing_feature_ids": 0,
+      "blank_rows_removed": 0,
+      "repeated_first_column_values": 0,
+      "empty_cells": 0,
+      "columns_detail": [
+        {
+          "name": "isoform_id",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC1exvivo_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC1LPS_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC2exvivo_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC2LPS_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC3LPS_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC3exvivo_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC4exvivo_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC4LPS_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC5exvivo_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC5LPS_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC6exvivo_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC6LPS_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC7LPS_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC7exvivo_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC8exvivo_salmon",
+          "nonempty_cells": 24939
+        },
+        {
+          "name": "HC8LPS_salmon",
+          "nonempty_cells": 24939
+        }
+      ],
+      "annotation_columns": [],
+      "numeric_column_summaries": [
+        {
+          "column": "HC1exvivo_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 26719.1045755749,
+          "zero": 10852,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 24.912004169518397
+        },
+        {
+          "column": "HC1LPS_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 116182.777544628,
+          "zero": 11505,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 55.08894547585309
+        },
+        {
+          "column": "HC2exvivo_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 12716.0233575381,
+          "zero": 11275,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 21.52818107216022
+        },
+        {
+          "column": "HC2LPS_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 161217.940380773,
+          "zero": 11578,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 54.35213011439689
+        },
+        {
+          "column": "HC3LPS_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 217117.445889714,
+          "zero": 11240,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 61.27710497951954
+        },
+        {
+          "column": "HC3exvivo_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 23151.2896152719,
+          "zero": 10820,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 23.28211137770353
+        },
+        {
+          "column": "HC4exvivo_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 30597.8718284766,
+          "zero": 10693,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 24.132515736518155
+        },
+        {
+          "column": "HC4LPS_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 118007.086320215,
+          "zero": 11005,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 52.783876902024524
+        },
+        {
+          "column": "HC5exvivo_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 12798.4671910981,
+          "zero": 11505,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 22.242871251362544
+        },
+        {
+          "column": "HC5LPS_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 182599.824312804,
+          "zero": 11597,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 61.897545733028615
+        },
+        {
+          "column": "HC6exvivo_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 45264.6022942256,
+          "zero": 11647,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 31.11139725158077
+        },
+        {
+          "column": "HC6LPS_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 181720.78150698,
+          "zero": 13911,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 73.1195079217534
+        },
+        {
+          "column": "HC7LPS_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 198670.44465203,
+          "zero": 13746,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 68.25584605509049
+        },
+        {
+          "column": "HC7exvivo_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 161491.622126393,
+          "zero": 10605,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 43.263770874930614
+        },
+        {
+          "column": "HC8exvivo_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 16370.9130797444,
+          "zero": 10737,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 25.538185908263337
+        },
+        {
+          "column": "HC8LPS_salmon",
+          "nonempty_cells": 24939,
+          "n": 24939,
+          "min": 0.0,
+          "max": 191914.243061347,
+          "zero": 11869,
+          "negative": 0,
+          "non_numeric": 0,
+          "mean": 64.79516434380345
+        }
+      ],
+      "cleaning_policy": "Trim surrounding whitespace and omit fully blank rows. Preserve source files, duplicate IDs, and empty cells. Reject inconsistent row widths."
+    }
+  ]
+}
