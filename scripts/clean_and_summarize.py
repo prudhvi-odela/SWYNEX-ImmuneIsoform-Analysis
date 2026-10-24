@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+"""Inspect and standardize GSE297994 processed TSV tables (Python 3.9+, stdlib only)."""
+from __future__ import annotations
+import csv, gzip, json, math, sys
+from collections import Counter
+from pathlib import Path
+ROOT = Path(__file__).resolve().parents[1]
+SOURCE_DIR = ROOT / "data" / "processed"
+CLEAN_DIR = ROOT / "data" / "cleaned"
+RESULTS_DIR = ROOT / "results"
+FILES = ("long_read_raw_counts.txt.gz", "long_read_salmon_abundance.txt.gz", "short_read_raw_counts.txt.gz", "short_read_salmon_abundance.txt.gz")
+
+def clean_table(filename: str) -> dict:
+    source = SOURCE_DIR / filename
+    if not source.is_file():
+        raise FileNotFoundError(f"Missing source table: {source}")
+    with gzip.open(source, "rt", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.reader(handle, delimiter="\t")
+        raw_header = next(reader, None)
+        if not raw_header:
+            raise ValueError(f"Empty table: {filename}")
+        header = [cell.strip() for cell in raw_header]
+        if any(not cell for cell in header):
+            raise ValueError(f"Blank column name in {filename}")
+        duplicate_columns = [name for name, n in Counter(header).items() if n > 1]
+        if duplicate_columns:
+            raise ValueError(f"Duplicate column names in {filename}: {duplicate_columns}")
+        CLEAN_DIR.mkdir(parents=True, exist_ok=True)
+        output = CLEAN_DIR / filename.removesuffix(".gz")
+        rows = blank_rows = empty_cells = duplicate_ids = 0
+        seen_ids = set()
+        numeric = [dict(n=0, total=0.0, min=None, max=None, zero=0, negative=0, non_numeric=0) for _ in header[1:]]
+        nonempty = [0] * len(header)
+        with output.open("w", encoding="utf-8", newline="") as out_handle:
+            writer = csv.writer(out_handle, delimiter="\t", lineterminator="\n")
+            writer.writerow(header)
+            for line_number, raw_row in enumerate(reader, start=2):
+                row = [cell.strip() for cell in raw_row]
+                if not any(row):
+                    blank_rows += 1
+                    continue
+                if len(row) != len(header):
+                    raise ValueError(f"{filename}:{line_number}: expected {len(header)} fields, found {len(row)}")
+                rows += 1
+                empty_cells += sum(cell == "" for cell in row)
+                for i, cell in enumerate(row):
+                    nonempty[i] += bool(cell)
+                if row[0] in seen_ids:
+                    duplicate_ids += 1
+                seen_ids.add(row[0])
+                for i, text in enumerate(row[1:]):
+                    if not text:
+                        continue
+                    try:
+                        value = float(text)
+                    except ValueError:
+                        numeric[i]["non_numeric"] += 1
+                        continue
+                    if not math.isfinite(value):
+                        numeric[i]["non_numeric"] += 1
+                        continue
+                    stat = numeric[i]
+                    stat["n"] += 1
+                    stat["total"] += value
+                    stat["min"] = value if stat["min"] is None else min(stat["min"], value)
+                    stat["max"] = value if stat["max"] is None else max(stat["max"], value)
+                    stat["zero"] += value == 0
+                    stat["negative"] += value < 0
+                writer.writerow(row)
+    column_summaries = []
+    for name, stat, filled in zip(header[1:], numeric, nonempty[1:]):
+        total = stat.pop("total")
+        stat["mean"] = total / stat["n"] if stat["n"] else None
+        column_summaries.append({"column": name, "nonempty_cells": filled, **stat})
+    return {"source": source.relative_to(ROOT).as_posix(), "cleaned_copy": output.relative_to(ROOT).as_posix(),
+            "rows": rows, "columns": len(header), "feature_id_column": header[0],
+            "duplicate_feature_ids": duplicate_ids, "blank_rows_removed": blank_rows,
+            "empty_cells": empty_cells, "columns_detail": [{"name": n, "nonempty_cells": k} for n,k in zip(header,nonempty)],
+            "numeric_column_summaries": column_summaries,
+            "cleaning_policy": "Trim surrounding whitespace and omit fully blank rows. Preserve source files, duplicate IDs, and empty cells. Reject inconsistent row widths."}
+
+def main() -> int:
+    try:
+        files = [clean_table(name) for name in FILES]
+    except (OSError, ValueError) as error:
+        print(f"ERROR: {error}", file=sys.stderr)
+        return 1
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    report = {"dataset": "NCBI GEO GSE297994", "generated_by": "scripts/clean_and_summarize.py", "files": files}
+    path = RESULTS_DIR / "task2_data_summary.json"
+    path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"Wrote {path.relative_to(ROOT)}")
+    for item in files:
+        print(f"{Path(item['source']).name}: {item['rows']} rows, {item['columns']} columns, {item['empty_cells']} empty cells, {item['duplicate_feature_ids']} duplicate IDs")
+    return 0
+
+if __name__ == "__main__":
+    raise SystemExit(main())
