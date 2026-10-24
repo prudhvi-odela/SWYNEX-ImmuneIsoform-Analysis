@@ -20,14 +20,16 @@ def clean_table(filename: str) -> dict:
         if not raw_header:
             raise ValueError(f"Empty table: {filename}")
         header = [cell.strip() for cell in raw_header]
-        if any(not cell for cell in header):
-            raise ValueError(f"Blank column name in {filename}")
+        if not header[0]:
+            header[0] = "feature_id"
+        if any(not cell for cell in header[1:]):
+            raise ValueError(f"Blank sample column name in {filename}")
         duplicate_columns = [name for name, n in Counter(header).items() if n > 1]
         if duplicate_columns:
             raise ValueError(f"Duplicate column names in {filename}: {duplicate_columns}")
         CLEAN_DIR.mkdir(parents=True, exist_ok=True)
         output = CLEAN_DIR / filename.removesuffix(".gz")
-        rows = blank_rows = empty_cells = duplicate_ids = 0
+        rows = blank_rows = empty_cells = duplicate_ids = missing_ids = 0
         seen_ids = set()
         numeric = [dict(n=0, total=0.0, min=None, max=None, zero=0, negative=0, non_numeric=0) for _ in header[1:]]
         nonempty = [0] * len(header)
@@ -45,6 +47,8 @@ def clean_table(filename: str) -> dict:
                 empty_cells += sum(cell == "" for cell in row)
                 for i, cell in enumerate(row):
                     nonempty[i] += bool(cell)
+                if not row[0]:
+                    missing_ids += 1
                 if row[0] in seen_ids:
                     duplicate_ids += 1
                 seen_ids.add(row[0])
@@ -74,7 +78,7 @@ def clean_table(filename: str) -> dict:
         column_summaries.append({"column": name, "nonempty_cells": filled, **stat})
     return {"source": source.relative_to(ROOT).as_posix(), "cleaned_copy": output.relative_to(ROOT).as_posix(),
             "rows": rows, "columns": len(header), "feature_id_column": header[0],
-            "duplicate_feature_ids": duplicate_ids, "blank_rows_removed": blank_rows,
+            "duplicate_feature_ids": duplicate_ids, "missing_feature_ids": missing_ids, "blank_rows_removed": blank_rows,
             "empty_cells": empty_cells, "columns_detail": [{"name": n, "nonempty_cells": k} for n,k in zip(header,nonempty)],
             "numeric_column_summaries": column_summaries,
             "cleaning_policy": "Trim surrounding whitespace and omit fully blank rows. Preserve source files, duplicate IDs, and empty cells. Reject inconsistent row widths."}
