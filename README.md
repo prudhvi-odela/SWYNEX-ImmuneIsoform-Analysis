@@ -1,6 +1,6 @@
 🧬 SWYNEX Bioinformatics Internship
 
-Task 1: Biological Dataset Selection
+Task 1: Biological Dataset Selection (completed)
 
 Organization: SWYNEX Technologies
 Domain: Bioinformatics
@@ -13,7 +13,7 @@ This repository documents my work during the SWYNEX Technologies Bioinformatics 
 
 The selected dataset, GSE297994, investigates activation-associated changes in RNA transcript isoforms in human monocytes using short-read and native long-read RNA sequencing.
 
-Future internship tasks will be documented in this repository as they are assigned.
+Task 2 work is now documented below. Further tasks will be added as they are assigned.
 
 🔬 2. Selected Biological Dataset
 
@@ -129,7 +129,7 @@ Formulate a research question| Completed
 Publish LinkedIn explanation post| Pending confirmation
 Submit Task 1 for review| Pending confirmation
 Receive reviewer approval| Awaiting confirmation
-Subsequent internship tasks| Not started
+Task 3 and subsequent tasks| Not started
 
 This table describes the current project documentation. Official task completion remains subject to SWYNEX reviewer approval.
 
