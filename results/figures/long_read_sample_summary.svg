@@ -1,10 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1240" height="770" viewBox="0 0 1240 770">
 <rect width="100%" height="100%" fill="#fff"/>
-<style>text{font-family:Arial,sans-serif;fill:#243342}.title{font-size:25px;font-weight:700}.subtitle{font-size:14px;fill:#526577}.panel{font-size:18px;font-weight:700}.axis{font-size:12px;fill:#526577}.sample{font-size:12px}.value{font-size:11px;fill:#34495e}.grid{stroke:#dce3e8;stroke-width:1}.group{font-size:13px;font-weight:700}</style>
+<style>text{font-family:Arial,sans-serif;fill:#243342}.title{font-size:25px;font-weight:700}.subtitle{font-size:14px;fill:#526577}.panel{font-size:18px;font-weight:700}.axis{font-size:12px;fill:#526577}.sample{font-size:14px}.value{font-size:11px;fill:#34495e}.grid{stroke:#dce3e8;stroke-width:1}.group{font-size:13px;font-weight:700}</style>
 <text x="100" y="42" class="title">Long Read raw-count sample summaries</text>
 <text x="100" y="69" class="subtitle">Descriptive sample-level totals and detected rows; conditions are grouped and colored consistently</text>
-<text x="367.5" y="105" text-anchor="middle" class="group">Ex vivo</text>
-<text x="902.5" y="105" text-anchor="middle" class="group">3 h LPS</text>
 <text x="100" y="127" class="panel">Total raw counts per sample</text>
 <line x1="100" y1="360.0" x2="1170" y2="360.0" class="grid"/>
 <text x="88" y="364.0" text-anchor="end" class="axis">0</text>
@@ -16,22 +14,26 @@
 <text x="88" y="149.0" text-anchor="end" class="axis">1.5M</text>
 <rect x="167.2" y="175.2" width="44.0" height="184.8" rx="3" fill="#3977a8"/>
 <text x="189.2" y="169.2" text-anchor="middle" class="value">1.3M</text>
-<text x="189.2" y="378" text-anchor="middle" class="sample">HC1</text>
+<text x="189.2" y="380" text-anchor="middle" class="sample">HC1</text>
 <rect x="345.5" y="252.0" width="44.0" height="108.0" rx="3" fill="#3977a8"/>
 <text x="367.5" y="246.0" text-anchor="middle" class="value">0.8M</text>
-<text x="367.5" y="378" text-anchor="middle" class="sample">HC2</text>
+<text x="367.5" y="380" text-anchor="middle" class="sample">HC2</text>
 <rect x="523.8" y="312.8" width="44.0" height="47.2" rx="3" fill="#3977a8"/>
 <text x="545.8" y="306.8" text-anchor="middle" class="value">0.3M</text>
-<text x="545.8" y="378" text-anchor="middle" class="sample">HC3</text>
+<text x="545.8" y="380" text-anchor="middle" class="sample">HC3</text>
 <rect x="702.2" y="202.9" width="44.0" height="157.1" rx="3" fill="#d4773c"/>
 <text x="724.2" y="196.9" text-anchor="middle" class="value">1.1M</text>
-<text x="724.2" y="378" text-anchor="middle" class="sample">HC1</text>
+<text x="724.2" y="380" text-anchor="middle" class="sample">HC1</text>
 <rect x="880.5" y="234.8" width="44.0" height="125.2" rx="3" fill="#d4773c"/>
 <text x="902.5" y="228.8" text-anchor="middle" class="value">0.9M</text>
-<text x="902.5" y="378" text-anchor="middle" class="sample">HC2</text>
+<text x="902.5" y="380" text-anchor="middle" class="sample">HC2</text>
 <rect x="1058.8" y="220.0" width="44.0" height="140.0" rx="3" fill="#d4773c"/>
 <text x="1080.8" y="214.0" text-anchor="middle" class="value">1.0M</text>
-<text x="1080.8" y="378" text-anchor="middle" class="sample">HC3</text>
+<text x="1080.8" y="380" text-anchor="middle" class="sample">HC3</text>
+<rect x="324.5" y="394" width="12" height="12" rx="2" fill="#3977a8"/>
+<text x="342.5" y="404" class="group">Ex vivo</text>
+<rect x="859.5" y="394" width="12" height="12" rx="2" fill="#d4773c"/>
+<text x="877.5" y="404" class="group">3 h LPS</text>
 <line x1="635.0" y1="145" x2="635.0" y2="384" stroke="#9aa8b4" stroke-dasharray="4 4"/>
 <text x="100" y="447" class="panel">Detected rows (count > 0)</text>
 <line x1="100" y1="680.0" x2="1170" y2="680.0" class="grid"/>
@@ -43,18 +45,20 @@
 <line x1="100" y1="465.0" x2="1170" y2="465.0" class="grid"/>
 <text x="88" y="469.0" text-anchor="end" class="axis">30k</text>
 <rect x="167.2" y="516.7" width="44.0" height="163.3" rx="3" fill="#3977a8"/>
-<text x="189.2" y="698" text-anchor="middle" class="sample">HC1</text>
+<text x="189.2" y="700" text-anchor="middle" class="sample">HC1</text>
 <rect x="345.5" y="525.3" width="44.0" height="154.7" rx="3" fill="#3977a8"/>
-<text x="367.5" y="698" text-anchor="middle" class="sample">HC2</text>
+<text x="367.5" y="700" text-anchor="middle" class="sample">HC2</text>
 <rect x="523.8" y="563.8" width="44.0" height="116.2" rx="3" fill="#3977a8"/>
-<text x="545.8" y="698" text-anchor="middle" class="sample">HC3</text>
+<text x="545.8" y="700" text-anchor="middle" class="sample">HC3</text>
 <rect x="702.2" y="520.5" width="44.0" height="159.5" rx="3" fill="#d4773c"/>
-<text x="724.2" y="698" text-anchor="middle" class="sample">HC1</text>
+<text x="724.2" y="700" text-anchor="middle" class="sample">HC1</text>
 <rect x="880.5" y="526.4" width="44.0" height="153.6" rx="3" fill="#d4773c"/>
-<text x="902.5" y="698" text-anchor="middle" class="sample">HC2</text>
+<text x="902.5" y="700" text-anchor="middle" class="sample">HC2</text>
 <rect x="1058.8" y="527.3" width="44.0" height="152.7" rx="3" fill="#d4773c"/>
-<text x="1080.8" y="698" text-anchor="middle" class="sample">HC3</text>
+<text x="1080.8" y="700" text-anchor="middle" class="sample">HC3</text>
+<rect x="324.5" y="714" width="12" height="12" rx="2" fill="#3977a8"/>
+<text x="342.5" y="724" class="group">Ex vivo</text>
+<rect x="859.5" y="714" width="12" height="12" rx="2" fill="#d4773c"/>
+<text x="877.5" y="724" class="group">3 h LPS</text>
 <line x1="635.0" y1="465" x2="635.0" y2="704" stroke="#9aa8b4" stroke-dasharray="4 4"/>
-<rect x="100" y="734" width="12" height="12" fill="#3977a8"/><text x="119" y="745" class="axis">Ex vivo</text>
-<rect x="194" y="734" width="12" height="12" fill="#d4773c"/><text x="213" y="745" class="axis">3 h LPS</text>
 </svg>

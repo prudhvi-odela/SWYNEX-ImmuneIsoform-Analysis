@@ -52,3 +52,4 @@ https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE297994
 - Ran `scripts/visualize_task3.py` with Python 3.12.14 and regenerated the SVG figures and per-sample TSV from the checked-in tables and metadata.
 - Revised Task 3 visuals after review: grouped condition bars, consistent condition colors, readable donor labels, and tidy axis intervals; long-read samples are condition-grouped.
 - Added a paired short-read top-100 gene-count share figure. In the source matrix, the per-sample top-100 share is 24.9–32.0% ex vivo and 42.6–50.8% after LPS; all eight donor pairs are higher in LPS. This is a descriptive composition pattern, not a differential-expression result, and it flags a normalization consideration for later analysis.
+- Final figure polish: added an explicit condition legend to the paired top-100 chart, moved value labels clear of donor-pair connector lines, and placed larger donor labels with colored condition captions beneath both sample-summary panels.

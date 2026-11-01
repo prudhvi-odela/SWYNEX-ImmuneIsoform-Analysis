@@ -1,10 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1240" height="770" viewBox="0 0 1240 770">
 <rect width="100%" height="100%" fill="#fff"/>
-<style>text{font-family:Arial,sans-serif;fill:#243342}.title{font-size:25px;font-weight:700}.subtitle{font-size:14px;fill:#526577}.panel{font-size:18px;font-weight:700}.axis{font-size:12px;fill:#526577}.sample{font-size:12px}.value{font-size:11px;fill:#34495e}.grid{stroke:#dce3e8;stroke-width:1}.group{font-size:13px;font-weight:700}</style>
+<style>text{font-family:Arial,sans-serif;fill:#243342}.title{font-size:25px;font-weight:700}.subtitle{font-size:14px;fill:#526577}.panel{font-size:18px;font-weight:700}.axis{font-size:12px;fill:#526577}.sample{font-size:14px}.value{font-size:11px;fill:#34495e}.grid{stroke:#dce3e8;stroke-width:1}.group{font-size:13px;font-weight:700}</style>
 <text x="100" y="42" class="title">Short Read raw-count sample summaries</text>
 <text x="100" y="69" class="subtitle">Descriptive sample-level totals and detected rows; conditions are grouped and colored consistently</text>
-<text x="367.5" y="105" text-anchor="middle" class="group">Ex vivo</text>
-<text x="902.5" y="105" text-anchor="middle" class="group">3 h LPS</text>
 <text x="100" y="127" class="panel">Total raw counts per sample</text>
 <line x1="100" y1="360.0" x2="1170" y2="360.0" class="grid"/>
 <text x="88" y="364.0" text-anchor="end" class="axis">0</text>
@@ -16,52 +14,56 @@
 <text x="88" y="149.0" text-anchor="end" class="axis">15M</text>
 <rect x="112.0" y="258.8" width="42.8" height="101.2" rx="3" fill="#3977a8"/>
 <text x="133.4" y="252.8" text-anchor="middle" class="value">7.1M</text>
-<text x="133.4" y="378" text-anchor="middle" class="sample">HC1</text>
+<text x="133.4" y="380" text-anchor="middle" class="sample">HC1</text>
 <rect x="178.9" y="257.4" width="42.8" height="102.6" rx="3" fill="#3977a8"/>
 <text x="200.3" y="251.4" text-anchor="middle" class="value">7.2M</text>
-<text x="200.3" y="378" text-anchor="middle" class="sample">HC2</text>
+<text x="200.3" y="380" text-anchor="middle" class="sample">HC2</text>
 <rect x="245.8" y="217.4" width="42.8" height="142.6" rx="3" fill="#3977a8"/>
 <text x="267.2" y="211.4" text-anchor="middle" class="value">9.9M</text>
-<text x="267.2" y="378" text-anchor="middle" class="sample">HC3</text>
+<text x="267.2" y="380" text-anchor="middle" class="sample">HC3</text>
 <rect x="312.7" y="181.4" width="42.8" height="178.6" rx="3" fill="#3977a8"/>
 <text x="334.1" y="175.4" text-anchor="middle" class="value">12.5M</text>
-<text x="334.1" y="378" text-anchor="middle" class="sample">HC4</text>
+<text x="334.1" y="380" text-anchor="middle" class="sample">HC4</text>
 <rect x="379.5" y="250.8" width="42.8" height="109.2" rx="3" fill="#3977a8"/>
 <text x="400.9" y="244.8" text-anchor="middle" class="value">7.6M</text>
-<text x="400.9" y="378" text-anchor="middle" class="sample">HC5</text>
+<text x="400.9" y="380" text-anchor="middle" class="sample">HC5</text>
 <rect x="446.4" y="269.4" width="42.8" height="90.6" rx="3" fill="#3977a8"/>
 <text x="467.8" y="263.4" text-anchor="middle" class="value">6.3M</text>
-<text x="467.8" y="378" text-anchor="middle" class="sample">HC6</text>
+<text x="467.8" y="380" text-anchor="middle" class="sample">HC6</text>
 <rect x="513.3" y="223.6" width="42.8" height="136.4" rx="3" fill="#3977a8"/>
 <text x="534.7" y="217.6" text-anchor="middle" class="value">9.5M</text>
-<text x="534.7" y="378" text-anchor="middle" class="sample">HC7</text>
+<text x="534.7" y="380" text-anchor="middle" class="sample">HC7</text>
 <rect x="580.2" y="225.7" width="42.8" height="134.3" rx="3" fill="#3977a8"/>
 <text x="601.6" y="219.7" text-anchor="middle" class="value">9.4M</text>
-<text x="601.6" y="378" text-anchor="middle" class="sample">HC8</text>
+<text x="601.6" y="380" text-anchor="middle" class="sample">HC8</text>
 <rect x="647.0" y="241.0" width="42.8" height="119.0" rx="3" fill="#d4773c"/>
 <text x="668.4" y="235.0" text-anchor="middle" class="value">8.3M</text>
-<text x="668.4" y="378" text-anchor="middle" class="sample">HC1</text>
+<text x="668.4" y="380" text-anchor="middle" class="sample">HC1</text>
 <rect x="713.9" y="245.9" width="42.8" height="114.1" rx="3" fill="#d4773c"/>
 <text x="735.3" y="239.9" text-anchor="middle" class="value">8.0M</text>
-<text x="735.3" y="378" text-anchor="middle" class="sample">HC2</text>
+<text x="735.3" y="380" text-anchor="middle" class="sample">HC2</text>
 <rect x="780.8" y="224.1" width="42.8" height="135.9" rx="3" fill="#d4773c"/>
 <text x="802.2" y="218.1" text-anchor="middle" class="value">9.5M</text>
-<text x="802.2" y="378" text-anchor="middle" class="sample">HC3</text>
+<text x="802.2" y="380" text-anchor="middle" class="sample">HC3</text>
 <rect x="847.7" y="228.9" width="42.8" height="131.1" rx="3" fill="#d4773c"/>
 <text x="869.1" y="222.9" text-anchor="middle" class="value">9.1M</text>
-<text x="869.1" y="378" text-anchor="middle" class="sample">HC4</text>
+<text x="869.1" y="380" text-anchor="middle" class="sample">HC4</text>
 <rect x="914.5" y="232.4" width="42.8" height="127.6" rx="3" fill="#d4773c"/>
 <text x="935.9" y="226.4" text-anchor="middle" class="value">8.9M</text>
-<text x="935.9" y="378" text-anchor="middle" class="sample">HC5</text>
+<text x="935.9" y="380" text-anchor="middle" class="sample">HC5</text>
 <rect x="981.4" y="272.2" width="42.8" height="87.8" rx="3" fill="#d4773c"/>
 <text x="1002.8" y="266.2" text-anchor="middle" class="value">6.1M</text>
-<text x="1002.8" y="378" text-anchor="middle" class="sample">HC6</text>
+<text x="1002.8" y="380" text-anchor="middle" class="sample">HC6</text>
 <rect x="1048.3" y="321.2" width="42.8" height="38.8" rx="3" fill="#d4773c"/>
 <text x="1069.7" y="315.2" text-anchor="middle" class="value">2.7M</text>
-<text x="1069.7" y="378" text-anchor="middle" class="sample">HC7</text>
+<text x="1069.7" y="380" text-anchor="middle" class="sample">HC7</text>
 <rect x="1115.2" y="206.3" width="42.8" height="153.7" rx="3" fill="#d4773c"/>
 <text x="1136.6" y="200.3" text-anchor="middle" class="value">10.7M</text>
-<text x="1136.6" y="378" text-anchor="middle" class="sample">HC8</text>
+<text x="1136.6" y="380" text-anchor="middle" class="sample">HC8</text>
+<rect x="324.5" y="394" width="12" height="12" rx="2" fill="#3977a8"/>
+<text x="342.5" y="404" class="group">Ex vivo</text>
+<rect x="859.5" y="394" width="12" height="12" rx="2" fill="#d4773c"/>
+<text x="877.5" y="404" class="group">3 h LPS</text>
 <line x1="635.0" y1="145" x2="635.0" y2="384" stroke="#9aa8b4" stroke-dasharray="4 4"/>
 <text x="100" y="447" class="panel">Detected rows (count > 0)</text>
 <line x1="100" y1="680.0" x2="1170" y2="680.0" class="grid"/>
@@ -77,38 +79,40 @@
 <line x1="100" y1="465.0" x2="1170" y2="465.0" class="grid"/>
 <text x="88" y="469.0" text-anchor="end" class="axis">25k</text>
 <rect x="112.0" y="516.5" width="42.8" height="163.5" rx="3" fill="#3977a8"/>
-<text x="133.4" y="698" text-anchor="middle" class="sample">HC1</text>
+<text x="133.4" y="700" text-anchor="middle" class="sample">HC1</text>
 <rect x="178.9" y="513.9" width="42.8" height="166.1" rx="3" fill="#3977a8"/>
-<text x="200.3" y="698" text-anchor="middle" class="sample">HC2</text>
+<text x="200.3" y="700" text-anchor="middle" class="sample">HC2</text>
 <rect x="245.8" y="508.8" width="42.8" height="171.2" rx="3" fill="#3977a8"/>
-<text x="267.2" y="698" text-anchor="middle" class="sample">HC3</text>
+<text x="267.2" y="700" text-anchor="middle" class="sample">HC3</text>
 <rect x="312.7" y="507.1" width="42.8" height="172.9" rx="3" fill="#3977a8"/>
-<text x="334.1" y="698" text-anchor="middle" class="sample">HC4</text>
+<text x="334.1" y="700" text-anchor="middle" class="sample">HC4</text>
 <rect x="379.5" y="524.6" width="42.8" height="155.4" rx="3" fill="#3977a8"/>
-<text x="400.9" y="698" text-anchor="middle" class="sample">HC5</text>
+<text x="400.9" y="700" text-anchor="middle" class="sample">HC5</text>
 <rect x="446.4" y="520.0" width="42.8" height="160.0" rx="3" fill="#3977a8"/>
-<text x="467.8" y="698" text-anchor="middle" class="sample">HC6</text>
+<text x="467.8" y="700" text-anchor="middle" class="sample">HC6</text>
 <rect x="513.3" y="518.4" width="42.8" height="161.6" rx="3" fill="#3977a8"/>
-<text x="534.7" y="698" text-anchor="middle" class="sample">HC7</text>
+<text x="534.7" y="700" text-anchor="middle" class="sample">HC7</text>
 <rect x="580.2" y="511.0" width="42.8" height="169.0" rx="3" fill="#3977a8"/>
-<text x="601.6" y="698" text-anchor="middle" class="sample">HC8</text>
+<text x="601.6" y="700" text-anchor="middle" class="sample">HC8</text>
 <rect x="647.0" y="519.6" width="42.8" height="160.4" rx="3" fill="#d4773c"/>
-<text x="668.4" y="698" text-anchor="middle" class="sample">HC1</text>
+<text x="668.4" y="700" text-anchor="middle" class="sample">HC1</text>
 <rect x="713.9" y="519.6" width="42.8" height="160.4" rx="3" fill="#d4773c"/>
-<text x="735.3" y="698" text-anchor="middle" class="sample">HC2</text>
+<text x="735.3" y="700" text-anchor="middle" class="sample">HC2</text>
 <rect x="780.8" y="508.4" width="42.8" height="171.6" rx="3" fill="#d4773c"/>
-<text x="802.2" y="698" text-anchor="middle" class="sample">HC3</text>
+<text x="802.2" y="700" text-anchor="middle" class="sample">HC3</text>
 <rect x="847.7" y="520.7" width="42.8" height="159.3" rx="3" fill="#d4773c"/>
-<text x="869.1" y="698" text-anchor="middle" class="sample">HC4</text>
+<text x="869.1" y="700" text-anchor="middle" class="sample">HC4</text>
 <rect x="914.5" y="524.5" width="42.8" height="155.5" rx="3" fill="#d4773c"/>
-<text x="935.9" y="698" text-anchor="middle" class="sample">HC5</text>
+<text x="935.9" y="700" text-anchor="middle" class="sample">HC5</text>
 <rect x="981.4" y="556.2" width="42.8" height="123.8" rx="3" fill="#d4773c"/>
-<text x="1002.8" y="698" text-anchor="middle" class="sample">HC6</text>
+<text x="1002.8" y="700" text-anchor="middle" class="sample">HC6</text>
 <rect x="1048.3" y="518.5" width="42.8" height="161.5" rx="3" fill="#d4773c"/>
-<text x="1069.7" y="698" text-anchor="middle" class="sample">HC7</text>
+<text x="1069.7" y="700" text-anchor="middle" class="sample">HC7</text>
 <rect x="1115.2" y="530.8" width="42.8" height="149.2" rx="3" fill="#d4773c"/>
-<text x="1136.6" y="698" text-anchor="middle" class="sample">HC8</text>
+<text x="1136.6" y="700" text-anchor="middle" class="sample">HC8</text>
+<rect x="324.5" y="714" width="12" height="12" rx="2" fill="#3977a8"/>
+<text x="342.5" y="724" class="group">Ex vivo</text>
+<rect x="859.5" y="714" width="12" height="12" rx="2" fill="#d4773c"/>
+<text x="877.5" y="724" class="group">3 h LPS</text>
 <line x1="635.0" y1="465" x2="635.0" y2="704" stroke="#9aa8b4" stroke-dasharray="4 4"/>
-<rect x="100" y="734" width="12" height="12" fill="#3977a8"/><text x="119" y="745" class="axis">Ex vivo</text>
-<rect x="194" y="734" width="12" height="12" fill="#d4773c"/><text x="213" y="745" class="axis">3 h LPS</text>
 </svg>
