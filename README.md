@@ -158,11 +158,11 @@ The workflow ran on all four processed tables. LinkedIn post: [Task 2 project up
 
 ## Task 3 — Visualization and interpretation
 
-Task 3 includes separate short-read and native long-read sample-summary figures for total raw counts and nonzero rows, plus a paired short-read comparison of the fraction of counts represented by each sample's top 100 genes. In these eight donor pairs, that fraction is higher in every LPS sample (42.6–50.8%) than in its ex vivo counterpart (24.9–32.0%). This descriptive composition pattern cautions that total-count depth scaling may be sensitive to condition-associated composition differences; it is not a differential-expression result. The two sequencing technologies remain separate.
+Task 3 now includes four descriptive figures: a paired top-100 count-share comparison, a short-read CPM versus median-of-ratios distribution plot, PCA panels for both technologies, and sample-correlation heatmaps for both technologies. The top-100 share is higher in every LPS donor pair (42.6–50.8%) than ex vivo (24.9–32.0%). PCA separates samples by condition along PC1 (95.45% short-read; 94.86% long-read variance). These visual patterns are not differential-expression tests; the normalization, PCA and correlation methods and their limits are documented in the [Task 3 report](docs/task3_visualization_interpretation.md).
 
 - [Task 3 methods, figure explanations, observations, and limitations](docs/task3_visualization_interpretation.md)
 - [Reproducible visualization script](scripts/visualize_task3.py) (Python 3.9+, standard library only)
-- Figures: [`short_read_sample_summary.svg`](results/figures/short_read_sample_summary.svg), [`long_read_sample_summary.svg`](results/figures/long_read_sample_summary.svg), [`short_read_top100_gene_share.svg`](results/figures/short_read_top100_gene_share.svg)
-- [Per-sample metrics, including top-100 count share](results/task3_sample_metrics.tsv)
+- Figures: [`short_read_top100_gene_share.svg`](results/figures/short_read_top100_gene_share.svg), [`short_read_normalization_boxplots.svg`](results/figures/short_read_normalization_boxplots.svg), [`normalized_counts_pca.svg`](results/figures/normalized_counts_pca.svg), [`sample_correlation_heatmaps.svg`](results/figures/sample_correlation_heatmaps.svg)
+- [Per-sample metrics and normalization summaries](results/task3_sample_metrics.tsv)
 
 Regenerate the outputs from the repository root with `python scripts/visualize_task3.py`.

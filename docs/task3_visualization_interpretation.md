@@ -2,63 +2,77 @@
 
 ## Scope and inputs
 
-This task makes descriptive plots from the Task 2 cleaned **raw-count** matrices and the existing sample metadata. It uses `data/cleaned/short_read_raw_counts.txt`, `data/cleaned/long_read_raw_counts.txt`, and `metadata/sample_metadata.tsv`. The Task 2 report (`results/task2_data_summary.json`) provides the validation context. The processed Salmon abundance matrices are not combined with raw counts or used in these figures because they are a different measure.
+The figures use the checked-in Task 2 cleaned raw-count tables and `metadata/sample_metadata.tsv`. Short-read and native long-read data are processed and plotted separately. These are descriptive analyses; no differential-expression test or p-value is calculated.
 
-The script maps each count column to the metadata using its HC volunteer number and condition label. For long-read raw counts, each matrix row is counted once using the row-level `ids` structure already documented in Task 2; repeated `gene_id` annotations are not treated as duplicate rows.
+## Reproduction and methods
 
-## Reproduction
-
-From this repository root, run:
+From the repository root, run:
 
 ```bash
 python scripts/visualize_task3.py
 ```
 
-The script uses only the Python standard library (Python 3.9 or newer). It writes three SVG figures to `results/figures/` and per-sample numeric values to `results/task3_sample_metrics.tsv`. No statistical testing or cross-platform merging is performed.
+The script uses Python 3.9+ and the standard library only. It writes four SVG figures and `results/task3_sample_metrics.tsv`.
+
+- **Feature filter:** calculate counts per million (CPM) from each table's raw library totals; retain features with CPM ≥ 1 in at least the smallest condition group (8 samples for short-read; 3 for long-read). This gives 12,428 short-read genes and 23,386 long-read transcript rows.
+- **Size factors:** use the median-of-ratios estimator (`ratio` method): compute each all-positive feature's geometric mean across samples, take the median count-to-geometric-mean ratio per sample, and scale factors to geometric mean 1. Features with a zero in any sample are omitted from the geometric-mean step, as in the default ratio method.
+- **Log values:** use log2(normalized count + 1), where normalized count is raw count divided by its size factor.
+- **PCA:** use the 500 filtered features with highest across-sample variance in log2 normalized counts. Center each feature across samples and project samples onto the first two principal components.
+- **Correlation:** calculate Pearson correlation between samples across all filtered log2 normalized features (not just the 500 PCA features).
 
 ## Figures and interpretation
 
-### Short-read raw-count sample summaries
-
-![Short-read raw-count sample summaries](../results/figures/short_read_sample_summary.svg)
-
-The upper panel shows the sum of the supplied raw gene counts for each of the 16 short-read samples. The lower panel counts rows with a raw count greater than zero. Both panels use the same condition colors and group samples by condition. Donors are labeled within each condition.
-
-Across the eight ex vivo samples, total counts range from 6,318,399 to 12,459,937 and detected rows range from 18,070 to 20,106. Across the eight LPS samples, total counts range from 2,708,161 to 10,723,039 and detected rows range from 14,396 to 19,951. These are descriptive ranges from the checked-in table.
-
-**What it does not prove:** These library totals and detected-row counts are not normalized expression measurements. By themselves they do not show differential expression, statistical significance, treatment effects, gene identity or function, or biological cause. Differences may reflect library depth and other technical or sample-level variation.
-
-### Native long-read raw-count sample summaries
-
-![Long-read raw-count sample summaries](../results/figures/long_read_sample_summary.svg)
-
-The panels show total raw counts and rows with a raw count greater than zero for the six native long-read samples (three per condition). Samples are grouped by condition and donor. Each row corresponds to the row-level feature in the source matrix; the repeated `gene_id` annotations are preserved and are not collapsed.
-
-Across the three ex vivo samples, total counts range from 329,056 to 1,289,290 and detected rows range from 16,211 to 22,790. Across the three LPS samples, total counts range from 873,440 to 1,096,147 and detected rows range from 21,302 to 22,257. These small group sizes and descriptive summaries support only a view of the supplied samples.
-
-**What it does not prove:** The plot does not establish differential transcript abundance, isoform switching, statistical significance, reproducibility in a population, or a causal LPS response. It does not adjust for sequencing depth or other covariates. A nonzero row is not evidence of a reliably detected or biologically relevant transcript.
-
-### Short-read top-100 gene-count share by donor
+### 1. Short-read top-100 gene-count share
 
 ![Top 100 gene-count share by condition, paired by donor](../results/figures/short_read_top100_gene_share.svg)
 
-For each short-read sample, the 100 rows with the largest raw gene counts were selected **within that sample**. The chart shows their summed counts as a percentage of that sample's total gene counts, pairing the two conditions for each of the eight donors. This is a concentration summary; the top-100 set can contain different genes in different samples.
+For each sample, the 100 rows with the highest raw gene counts are selected within that sample; their counts are shown as a fraction of all counts. The top-100 set can differ from sample to sample.
 
-In the checked-in table, the top-100 share is 24.9–32.0% in ex vivo samples and 42.6–50.8% in LPS samples. All eight donor pairs have a higher share in LPS; paired differences range from 15.1 to 18.9 percentage points. This is a descriptive pattern in these samples. It indicates that the raw-count composition is more concentrated in the largest-count rows in LPS samples, so total-count depth scaling alone may be sensitive to composition differences. This should be examined when choosing normalization and modeling methods in a later analysis.
+The share is 24.9–32.0% ex vivo and 42.6–50.8% after LPS. It is higher in all eight donor pairs, by 15.1–18.9 percentage points. This shows greater concentration of the observed counts among the highest-count rows in the LPS samples.
 
-**What it does not prove:** The chart does not identify which genes drive the pattern because the top 100 are selected separately for each sample. It does not establish differential expression, a biological mechanism, statistical significance, or that LPS caused the change. A higher fraction could reflect increased abundance of some genes, decreased abundance of others, or both; raw counts alone cannot distinguish these explanations.
+**It does not prove:** which specific genes drive the pattern, differential expression, a causal LPS effect, or statistical significance. A change in share can result from changes in the top genes, the remaining genes, or both. It does flag that composition differences may affect simple library-depth scaling.
+
+### 2. Short-read CPM and median-of-ratios distributions
+
+![Per-sample distributions before and after size-factor normalization](../results/figures/short_read_normalization_boxplots.svg)
+
+Each box summarizes genes that pass the CPM filter and have a nonzero count in that sample. The first panel shows log2 CPM; the second shows log2(size-factor-normalized count + 1). CPM medians are 22.2–24.4 ex vivo and 7.6–10.0 after LPS. After median-of-ratios normalization, per-sample medians fall between 6.70 and 7.00 on the log2 scale.
+
+This illustrates that median-of-ratios size factors align the central sample distributions despite the CPM median shift.
+
+**It does not prove:** that the normalization is biologically correct, that most genes are unchanged, or that individual genes have no treatment response. Median alignment is a distribution check, not validation against an external truth. Outliers are not drawn; whiskers extend to the most extreme values within 1.5 × IQR.
+
+### 3. PCA of normalized log counts
+
+![PCA of short-read and long-read normalized log counts](../results/figures/normalized_counts_pca.svg)
+
+PC1 explains 95.45% of variance for short-read and 94.86% for long-read among the selected 500 features. In both panels, samples separate by condition along PC1.
+
+This shows that condition labels align with the largest axis of variation in these processed data after the stated filter and normalization. The same qualitative separation appears in both sequencing technologies, which remain analyzed independently.
+
+**It does not prove:** that LPS caused all of the separation, which genes drive it, statistical significance, or generalization beyond these donors. PCA is descriptive, and the result depends on the filter, normalization, log transform, and variable-feature selection.
+
+### 4. Sample-to-sample correlation heatmaps
+
+![Short-read and long-read sample correlation heatmaps](../results/figures/sample_correlation_heatmaps.svg)
+
+Pearson correlations use all CPM-filtered normalized log-count features. In both technologies, within-condition samples are more similar to one another than to samples in the other condition. For native long-read ex vivo samples, HC3 correlates 0.725 with HC1 and 0.785 with HC2; HC1 and HC2 correlate 0.901 with each other. HC3 also has the smallest long-read raw-count total (329,056).
+
+The weaker HC3 correlations and its shallower library are observations to keep in mind during later analysis.
+
+**It does not prove:** that low sequencing depth caused the lower correlations, that HC3 is an outlier to remove, or that any pairwise correlation is statistically significant. Long-read groups have only three samples each.
 
 ## Limitations
 
-- The sample-summary figures show raw counts without normalization or transformation; total counts are strongly affected by sequencing depth. The top-100 fraction is a within-sample proportion and describes composition, not normalized gene-level expression.
-- The short-read top-100 comparison uses eight donor pairs, but the figure is descriptive and has no inferential test. Its top-100 gene membership is sample-specific.
-- The short-read and long-read assays differ in platform, sample size, and table feature structure. Their counts are shown separately and must not be compared on the same numeric scale.
-- The short-read samples have eight volunteers per condition; the native long-read samples have three per condition. The figure is descriptive and does not resolve pairing or other study-design questions.
-- The detected-row threshold is exactly `count > 0`, selected as a transparent descriptive summary, not as a validated expression threshold.
-- These charts summarize the processed tables supplied in this repository. They do not independently verify upstream quantification, sample identity, or biological validity.
+- These figures summarize processed counts and are not differential-expression or isoform-switching tests.
+- Median-of-ratios normalization relies on a compositional assumption about the bulk of features; the top-100 pattern makes that assumption important to revisit in a later inferential analysis.
+- The CPM filter is a descriptive feature filter and is not a substitute for a statistical model's filtering procedure.
+- PCA and correlations depend on the stated normalization, filter, log transform, and feature set. PC1 variance is not a measure of treatment effect size or significance.
+- Short-read has eight donors per condition; long-read has three. Conclusions, especially from long-read, are descriptive and have limited population-level support.
+- The analysis does not independently validate upstream quantification, sample identity, or biological validity.
 
 ## Deliverables
 
 - Reproducible script: `scripts/visualize_task3.py`
-- Figures: `results/figures/short_read_sample_summary.svg`, `results/figures/long_read_sample_summary.svg`, and `results/figures/short_read_top100_gene_share.svg`
-- Per-sample values: `results/task3_sample_metrics.tsv`
+- Figures: `results/figures/short_read_top100_gene_share.svg`, `results/figures/short_read_normalization_boxplots.svg`, `results/figures/normalized_counts_pca.svg`, and `results/figures/sample_correlation_heatmaps.svg`
+- Per-sample metrics: `results/task3_sample_metrics.tsv`

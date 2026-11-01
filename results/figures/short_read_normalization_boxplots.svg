@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1780" height="900" viewBox="0 0 1780 900">
+<rect width="100%" height="100%" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#243342}.title{font-size:25px;font-weight:700}.subtitle{font-size:14px;fill:#526577}.panel{font-size:18px;font-weight:700}.axis{font-size:12px;fill:#526577}.sample{font-size:12px}.value{font-size:11px;fill:#34495e}.grid{stroke:#dce3e8;stroke-width:1}.group{font-size:13px;font-weight:700}</style>
+<text x="70" y="42" class="title">Median-of-ratios normalization aligns short-read sample distributions</text>
+<text x="70" y="68" class="subtitle">Boxes use genes passing CPM ≥ 1 in at least 8 samples and expressed (count &gt; 0) in each sample</text>
+<text x="120" y="117" class="panel">Expressed-feature CPM (log2 scale)</text>
+<line x1="120" y1="395.4" x2="1730" y2="395.4" class="grid"/>
+<text x="108" y="399.4" text-anchor="end" class="axis">-5</text>
+<line x1="120" y1="343.3" x2="1730" y2="343.3" class="grid"/>
+<text x="108" y="347.3" text-anchor="end" class="axis">0</text>
+<line x1="120" y1="291.2" x2="1730" y2="291.2" class="grid"/>
+<text x="108" y="295.2" text-anchor="end" class="axis">5</text>
+<line x1="120" y1="239.2" x2="1730" y2="239.2" class="grid"/>
+<text x="108" y="243.2" text-anchor="end" class="axis">10</text>
+<line x1="120" y1="187.1" x2="1730" y2="187.1" class="grid"/>
+<text x="108" y="191.1" text-anchor="end" class="axis">15</text>
+<line x1="120" y1="135.0" x2="1730" y2="135.0" class="grid"/>
+<text x="108" y="139.0" text-anchor="end" class="axis">20</text>
+<line x1="170.3125" y1="228.2" x2="170.3125" y2="362.3" stroke="#3977a8" stroke-width="2"/>
+<line x1="159.8125" y1="228.2" x2="180.8125" y2="228.2" stroke="#3977a8" stroke-width="2"/>
+<line x1="159.8125" y1="362.3" x2="180.8125" y2="362.3" stroke="#3977a8" stroke-width="2"/>
+<rect x="149.3125" y="280.4" width="42" height="35.4" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="149.3125" y1="296.7" x2="191.3125" y2="296.7" stroke="#17232d" stroke-width="2"/>
+<text x="170.3125" y="403" text-anchor="middle" class="sample">HC1</text>
+<line x1="270.9375" y1="226.0" x2="270.9375" y2="362.5" stroke="#3977a8" stroke-width="2"/>
+<line x1="260.4375" y1="226.0" x2="281.4375" y2="226.0" stroke="#3977a8" stroke-width="2"/>
+<line x1="260.4375" y1="362.5" x2="281.4375" y2="362.5" stroke="#3977a8" stroke-width="2"/>
+<rect x="249.9375" y="279.1" width="42" height="35.7" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="249.9375" y1="295.5" x2="291.9375" y2="295.5" stroke="#17232d" stroke-width="2"/>
+<text x="270.9375" y="403" text-anchor="middle" class="sample">HC2</text>
+<line x1="371.5625" y1="228.0" x2="371.5625" y2="367.4" stroke="#3977a8" stroke-width="2"/>
+<line x1="361.0625" y1="228.0" x2="382.0625" y2="228.0" stroke="#3977a8" stroke-width="2"/>
+<line x1="361.0625" y1="367.4" x2="382.0625" y2="367.4" stroke="#3977a8" stroke-width="2"/>
+<rect x="350.5625" y="279.6" width="42" height="35.3" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="350.5625" y1="295.6" x2="392.5625" y2="295.6" stroke="#17232d" stroke-width="2"/>
+<text x="371.5625" y="403" text-anchor="middle" class="sample">HC3</text>
+<line x1="472.1875" y1="227.3" x2="472.1875" y2="364.7" stroke="#3977a8" stroke-width="2"/>
+<line x1="461.6875" y1="227.3" x2="482.6875" y2="227.3" stroke="#3977a8" stroke-width="2"/>
+<line x1="461.6875" y1="364.7" x2="482.6875" y2="364.7" stroke="#3977a8" stroke-width="2"/>
+<rect x="451.1875" y="279.5" width="42" height="35.0" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="451.1875" y1="295.3" x2="493.1875" y2="295.3" stroke="#17232d" stroke-width="2"/>
+<text x="472.1875" y="403" text-anchor="middle" class="sample">HC4</text>
+<line x1="572.8125" y1="227.4" x2="572.8125" y2="363.4" stroke="#3977a8" stroke-width="2"/>
+<line x1="562.3125" y1="227.4" x2="583.3125" y2="227.4" stroke="#3977a8" stroke-width="2"/>
+<line x1="562.3125" y1="363.4" x2="583.3125" y2="363.4" stroke="#3977a8" stroke-width="2"/>
+<rect x="551.8125" y="279.7" width="42" height="35.1" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="551.8125" y1="295.7" x2="593.8125" y2="295.7" stroke="#17232d" stroke-width="2"/>
+<text x="572.8125" y="403" text-anchor="middle" class="sample">HC5</text>
+<line x1="673.4375" y1="231.2" x2="673.4375" y2="360.6" stroke="#3977a8" stroke-width="2"/>
+<line x1="662.9375" y1="231.2" x2="683.9375" y2="231.2" stroke="#3977a8" stroke-width="2"/>
+<line x1="662.9375" y1="360.6" x2="683.9375" y2="360.6" stroke="#3977a8" stroke-width="2"/>
+<rect x="652.4375" y="280.7" width="42" height="33.2" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="652.4375" y1="296.2" x2="694.4375" y2="296.2" stroke="#17232d" stroke-width="2"/>
+<text x="673.4375" y="403" text-anchor="middle" class="sample">HC6</text>
+<line x1="774.0625" y1="230.2" x2="774.0625" y2="366.8" stroke="#3977a8" stroke-width="2"/>
+<line x1="763.5625" y1="230.2" x2="784.5625" y2="230.2" stroke="#3977a8" stroke-width="2"/>
+<line x1="763.5625" y1="366.8" x2="784.5625" y2="366.8" stroke="#3977a8" stroke-width="2"/>
+<rect x="753.0625" y="281.2" width="42" height="34.3" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="753.0625" y1="296.1" x2="795.0625" y2="296.1" stroke="#17232d" stroke-width="2"/>
+<text x="774.0625" y="403" text-anchor="middle" class="sample">HC7</text>
+<line x1="874.6875" y1="228.3" x2="874.6875" y2="366.5" stroke="#3977a8" stroke-width="2"/>
+<line x1="864.1875" y1="228.3" x2="885.1875" y2="228.3" stroke="#3977a8" stroke-width="2"/>
+<line x1="864.1875" y1="366.5" x2="885.1875" y2="366.5" stroke="#3977a8" stroke-width="2"/>
+<rect x="853.6875" y="280.5" width="42" height="34.9" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="853.6875" y1="296.1" x2="895.6875" y2="296.1" stroke="#17232d" stroke-width="2"/>
+<text x="874.6875" y="403" text-anchor="middle" class="sample">HC8</text>
+<line x1="975.3125" y1="233.0" x2="975.3125" y2="375.1" stroke="#d4773c" stroke-width="2"/>
+<line x1="964.8125" y1="233.0" x2="985.8125" y2="233.0" stroke="#d4773c" stroke-width="2"/>
+<line x1="964.8125" y1="375.1" x2="985.8125" y2="375.1" stroke="#d4773c" stroke-width="2"/>
+<rect x="954.3125" y="291.6" width="42" height="39.3" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="954.3125" y1="311.7" x2="996.3125" y2="311.7" stroke="#17232d" stroke-width="2"/>
+<text x="975.3125" y="403" text-anchor="middle" class="sample">HC1</text>
+<line x1="1075.9375" y1="230.4" x2="1075.9375" y2="374.5" stroke="#d4773c" stroke-width="2"/>
+<line x1="1065.4375" y1="230.4" x2="1086.4375" y2="230.4" stroke="#d4773c" stroke-width="2"/>
+<line x1="1065.4375" y1="374.5" x2="1086.4375" y2="374.5" stroke="#d4773c" stroke-width="2"/>
+<rect x="1054.9375" y="290.3" width="42" height="40.0" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1054.9375" y1="310.0" x2="1096.9375" y2="310.0" stroke="#17232d" stroke-width="2"/>
+<text x="1075.9375" y="403" text-anchor="middle" class="sample">HC2</text>
+<line x1="1176.5625" y1="228.6" x2="1176.5625" y2="377.1" stroke="#d4773c" stroke-width="2"/>
+<line x1="1166.0625" y1="228.6" x2="1187.0625" y2="228.6" stroke="#d4773c" stroke-width="2"/>
+<line x1="1166.0625" y1="377.1" x2="1187.0625" y2="377.1" stroke="#d4773c" stroke-width="2"/>
+<rect x="1155.5625" y="289.8" width="42" height="40.9" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1155.5625" y1="310.4" x2="1197.5625" y2="310.4" stroke="#17232d" stroke-width="2"/>
+<text x="1176.5625" y="403" text-anchor="middle" class="sample">HC3</text>
+<line x1="1277.1875" y1="234.9" x2="1277.1875" y2="376.6" stroke="#d4773c" stroke-width="2"/>
+<line x1="1266.6875" y1="234.9" x2="1287.6875" y2="234.9" stroke="#d4773c" stroke-width="2"/>
+<line x1="1266.6875" y1="376.6" x2="1287.6875" y2="376.6" stroke="#d4773c" stroke-width="2"/>
+<rect x="1256.1875" y="290.9" width="42" height="38.0" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1256.1875" y1="309.8" x2="1298.1875" y2="309.8" stroke="#17232d" stroke-width="2"/>
+<text x="1277.1875" y="403" text-anchor="middle" class="sample">HC4</text>
+<line x1="1377.8125" y1="229.4" x2="1377.8125" y2="376.2" stroke="#d4773c" stroke-width="2"/>
+<line x1="1367.3125" y1="229.4" x2="1388.3125" y2="229.4" stroke="#d4773c" stroke-width="2"/>
+<line x1="1367.3125" y1="376.2" x2="1388.3125" y2="376.2" stroke="#d4773c" stroke-width="2"/>
+<rect x="1356.8125" y="291.7" width="42" height="41.9" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1356.8125" y1="312.8" x2="1398.8125" y2="312.8" stroke="#17232d" stroke-width="2"/>
+<text x="1377.8125" y="403" text-anchor="middle" class="sample">HC5</text>
+<line x1="1478.4375" y1="235.9" x2="1478.4375" y2="370.6" stroke="#d4773c" stroke-width="2"/>
+<line x1="1467.9375" y1="235.9" x2="1488.9375" y2="235.9" stroke="#d4773c" stroke-width="2"/>
+<line x1="1467.9375" y1="370.6" x2="1488.9375" y2="370.6" stroke="#d4773c" stroke-width="2"/>
+<rect x="1457.4375" y="290.6" width="42" height="36.6" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1457.4375" y1="308.8" x2="1499.4375" y2="308.8" stroke="#17232d" stroke-width="2"/>
+<text x="1478.4375" y="403" text-anchor="middle" class="sample">HC6</text>
+<line x1="1579.0625" y1="235.4" x2="1579.0625" y2="358.3" stroke="#d4773c" stroke-width="2"/>
+<line x1="1568.5625" y1="235.4" x2="1589.5625" y2="235.4" stroke="#d4773c" stroke-width="2"/>
+<line x1="1568.5625" y1="358.3" x2="1589.5625" y2="358.3" stroke="#d4773c" stroke-width="2"/>
+<rect x="1558.0625" y="290.4" width="42" height="36.7" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1558.0625" y1="308.8" x2="1600.0625" y2="308.8" stroke="#17232d" stroke-width="2"/>
+<text x="1579.0625" y="403" text-anchor="middle" class="sample">HC7</text>
+<line x1="1679.6875" y1="233.5" x2="1679.6875" y2="379.0" stroke="#d4773c" stroke-width="2"/>
+<line x1="1669.1875" y1="233.5" x2="1690.1875" y2="233.5" stroke="#d4773c" stroke-width="2"/>
+<line x1="1669.1875" y1="379.0" x2="1690.1875" y2="379.0" stroke="#d4773c" stroke-width="2"/>
+<rect x="1658.6875" y="292.4" width="42" height="39.4" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1658.6875" y1="312.6" x2="1700.6875" y2="312.6" stroke="#17232d" stroke-width="2"/>
+<text x="1679.6875" y="403" text-anchor="middle" class="sample">HC8</text>
+<rect x="484.5" y="417" width="12" height="12" rx="2" fill="#3977a8"/>
+<text x="502.5" y="427" class="group">Ex vivo</text>
+<rect x="1289.5" y="417" width="12" height="12" rx="2" fill="#d4773c"/>
+<text x="1307.5" y="427" class="group">3 h LPS</text>
+<line x1="925.0" y1="135" x2="925.0" y2="410" stroke="#9aa8b4" stroke-dasharray="4 4"/>
+<text x="120" y="497" class="panel">Median-of-ratios normalized counts (log2(count + 1))</text>
+<line x1="120" y1="765.0" x2="1730" y2="765.0" class="grid"/>
+<text x="108" y="769.0" text-anchor="end" class="axis">0</text>
+<line x1="120" y1="702.5" x2="1730" y2="702.5" class="grid"/>
+<text x="108" y="706.5" text-anchor="end" class="axis">5</text>
+<line x1="120" y1="640.0" x2="1730" y2="640.0" class="grid"/>
+<text x="108" y="644.0" text-anchor="end" class="axis">10</text>
+<line x1="120" y1="577.5" x2="1730" y2="577.5" class="grid"/>
+<text x="108" y="581.5" text-anchor="end" class="axis">15</text>
+<line x1="120" y1="515.0" x2="1730" y2="515.0" class="grid"/>
+<text x="108" y="519.0" text-anchor="end" class="axis">20</text>
+<line x1="170.3125" y1="597.6" x2="170.3125" y2="755.2" stroke="#3977a8" stroke-width="2"/>
+<line x1="159.8125" y1="597.6" x2="180.8125" y2="597.6" stroke="#3977a8" stroke-width="2"/>
+<line x1="159.8125" y1="755.2" x2="180.8125" y2="755.2" stroke="#3977a8" stroke-width="2"/>
+<rect x="149.3125" y="660.2" width="42" height="42.0" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="149.3125" y1="679.6" x2="191.3125" y2="679.6" stroke="#17232d" stroke-width="2"/>
+<text x="170.3125" y="783" text-anchor="middle" class="sample">HC1</text>
+<line x1="270.9375" y1="596.9" x2="270.9375" y2="755.9" stroke="#3977a8" stroke-width="2"/>
+<line x1="260.4375" y1="596.9" x2="281.4375" y2="596.9" stroke="#3977a8" stroke-width="2"/>
+<line x1="260.4375" y1="755.9" x2="281.4375" y2="755.9" stroke="#3977a8" stroke-width="2"/>
+<rect x="249.9375" y="660.0" width="42" height="42.3" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="249.9375" y1="679.6" x2="291.9375" y2="679.6" stroke="#17232d" stroke-width="2"/>
+<text x="270.9375" y="783" text-anchor="middle" class="sample">HC2</text>
+<line x1="371.5625" y1="598.5" x2="371.5625" y2="757.9" stroke="#3977a8" stroke-width="2"/>
+<line x1="361.0625" y1="598.5" x2="382.0625" y2="598.5" stroke="#3977a8" stroke-width="2"/>
+<line x1="361.0625" y1="757.9" x2="382.0625" y2="757.9" stroke="#3977a8" stroke-width="2"/>
+<rect x="350.5625" y="660.3" width="42" height="41.8" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="350.5625" y1="679.4" x2="392.5625" y2="679.4" stroke="#17232d" stroke-width="2"/>
+<text x="371.5625" y="783" text-anchor="middle" class="sample">HC3</text>
+<line x1="472.1875" y1="598.2" x2="472.1875" y2="759.2" stroke="#3977a8" stroke-width="2"/>
+<line x1="461.6875" y1="598.2" x2="482.6875" y2="598.2" stroke="#3977a8" stroke-width="2"/>
+<line x1="461.6875" y1="759.2" x2="482.6875" y2="759.2" stroke="#3977a8" stroke-width="2"/>
+<rect x="451.1875" y="660.4" width="42" height="41.5" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="451.1875" y1="679.3" x2="493.1875" y2="679.3" stroke="#17232d" stroke-width="2"/>
+<text x="472.1875" y="783" text-anchor="middle" class="sample">HC4</text>
+<line x1="572.8125" y1="598.9" x2="572.8125" y2="756.2" stroke="#3977a8" stroke-width="2"/>
+<line x1="562.3125" y1="598.9" x2="583.3125" y2="598.9" stroke="#3977a8" stroke-width="2"/>
+<line x1="562.3125" y1="756.2" x2="583.3125" y2="756.2" stroke="#3977a8" stroke-width="2"/>
+<rect x="551.8125" y="660.4" width="42" height="41.6" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="551.8125" y1="679.6" x2="593.8125" y2="679.6" stroke="#17232d" stroke-width="2"/>
+<text x="572.8125" y="783" text-anchor="middle" class="sample">HC5</text>
+<line x1="673.4375" y1="601.8" x2="673.4375" y2="754.4" stroke="#3977a8" stroke-width="2"/>
+<line x1="662.9375" y1="601.8" x2="683.9375" y2="601.8" stroke="#3977a8" stroke-width="2"/>
+<line x1="662.9375" y1="754.4" x2="683.9375" y2="754.4" stroke="#3977a8" stroke-width="2"/>
+<rect x="652.4375" y="660.4" width="42" height="39.4" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="652.4375" y1="679.0" x2="694.4375" y2="679.0" stroke="#17232d" stroke-width="2"/>
+<text x="673.4375" y="783" text-anchor="middle" class="sample">HC6</text>
+<line x1="774.0625" y1="600.4" x2="774.0625" y2="757.2" stroke="#3977a8" stroke-width="2"/>
+<line x1="763.5625" y1="600.4" x2="784.5625" y2="600.4" stroke="#3977a8" stroke-width="2"/>
+<line x1="763.5625" y1="757.2" x2="784.5625" y2="757.2" stroke="#3977a8" stroke-width="2"/>
+<rect x="753.0625" y="660.9" width="42" height="40.6" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="753.0625" y1="678.7" x2="795.0625" y2="678.7" stroke="#17232d" stroke-width="2"/>
+<text x="774.0625" y="783" text-anchor="middle" class="sample">HC7</text>
+<line x1="874.6875" y1="599.0" x2="874.6875" y2="757.4" stroke="#3977a8" stroke-width="2"/>
+<line x1="864.1875" y1="599.0" x2="885.1875" y2="599.0" stroke="#3977a8" stroke-width="2"/>
+<line x1="864.1875" y1="757.4" x2="885.1875" y2="757.4" stroke="#3977a8" stroke-width="2"/>
+<rect x="853.6875" y="660.8" width="42" height="41.4" fill="#3977a8" fill-opacity=".72" stroke="#3977a8"/>
+<line x1="853.6875" y1="679.4" x2="895.6875" y2="679.4" stroke="#17232d" stroke-width="2"/>
+<text x="874.6875" y="783" text-anchor="middle" class="sample">HC8</text>
+<line x1="975.3125" y1="585.5" x2="975.3125" y2="747.2" stroke="#d4773c" stroke-width="2"/>
+<line x1="964.8125" y1="585.5" x2="985.8125" y2="585.5" stroke="#d4773c" stroke-width="2"/>
+<line x1="964.8125" y1="747.2" x2="985.8125" y2="747.2" stroke="#d4773c" stroke-width="2"/>
+<rect x="954.3125" y="655.3" width="42" height="46.6" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="954.3125" y1="679.3" x2="996.3125" y2="679.3" stroke="#17232d" stroke-width="2"/>
+<text x="975.3125" y="783" text-anchor="middle" class="sample">HC1</text>
+<line x1="1075.9375" y1="585.0" x2="1075.9375" y2="748.2" stroke="#d4773c" stroke-width="2"/>
+<line x1="1065.4375" y1="585.0" x2="1086.4375" y2="585.0" stroke="#d4773c" stroke-width="2"/>
+<line x1="1065.4375" y1="748.2" x2="1086.4375" y2="748.2" stroke="#d4773c" stroke-width="2"/>
+<rect x="1054.9375" y="656.1" width="42" height="47.4" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1054.9375" y1="679.7" x2="1096.9375" y2="679.7" stroke="#17232d" stroke-width="2"/>
+<text x="1075.9375" y="783" text-anchor="middle" class="sample">HC2</text>
+<line x1="1176.5625" y1="584.1" x2="1176.5625" y2="750.7" stroke="#d4773c" stroke-width="2"/>
+<line x1="1166.0625" y1="584.1" x2="1187.0625" y2="584.1" stroke="#d4773c" stroke-width="2"/>
+<line x1="1166.0625" y1="750.7" x2="1187.0625" y2="750.7" stroke="#d4773c" stroke-width="2"/>
+<rect x="1155.5625" y="656.7" width="42" height="48.4" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1155.5625" y1="681.2" x2="1197.5625" y2="681.2" stroke="#17232d" stroke-width="2"/>
+<text x="1176.5625" y="783" text-anchor="middle" class="sample">HC3</text>
+<line x1="1277.1875" y1="590.3" x2="1277.1875" y2="750.0" stroke="#d4773c" stroke-width="2"/>
+<line x1="1266.6875" y1="590.3" x2="1287.6875" y2="590.3" stroke="#d4773c" stroke-width="2"/>
+<line x1="1266.6875" y1="750.0" x2="1287.6875" y2="750.0" stroke="#d4773c" stroke-width="2"/>
+<rect x="1256.1875" y="657.4" width="42" height="45.0" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1256.1875" y1="680.0" x2="1298.1875" y2="680.0" stroke="#17232d" stroke-width="2"/>
+<text x="1277.1875" y="783" text-anchor="middle" class="sample">HC4</text>
+<line x1="1377.8125" y1="580.5" x2="1377.8125" y2="747.7" stroke="#d4773c" stroke-width="2"/>
+<line x1="1367.3125" y1="580.5" x2="1388.3125" y2="580.5" stroke="#d4773c" stroke-width="2"/>
+<line x1="1367.3125" y1="747.7" x2="1388.3125" y2="747.7" stroke="#d4773c" stroke-width="2"/>
+<rect x="1356.8125" y="655.0" width="42" height="49.7" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1356.8125" y1="680.2" x2="1398.8125" y2="680.2" stroke="#17232d" stroke-width="2"/>
+<text x="1377.8125" y="783" text-anchor="middle" class="sample">HC5</text>
+<line x1="1478.4375" y1="590.7" x2="1478.4375" y2="744.7" stroke="#d4773c" stroke-width="2"/>
+<line x1="1467.9375" y1="590.7" x2="1488.9375" y2="590.7" stroke="#d4773c" stroke-width="2"/>
+<line x1="1467.9375" y1="744.7" x2="1488.9375" y2="744.7" stroke="#d4773c" stroke-width="2"/>
+<rect x="1457.4375" y="655.7" width="42" height="43.4" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1457.4375" y1="677.5" x2="1499.4375" y2="677.5" stroke="#17232d" stroke-width="2"/>
+<text x="1478.4375" y="783" text-anchor="middle" class="sample">HC6</text>
+<line x1="1579.0625" y1="591.6" x2="1579.0625" y2="734.8" stroke="#d4773c" stroke-width="2"/>
+<line x1="1568.5625" y1="591.6" x2="1589.5625" y2="591.6" stroke="#d4773c" stroke-width="2"/>
+<line x1="1568.5625" y1="734.8" x2="1589.5625" y2="734.8" stroke="#d4773c" stroke-width="2"/>
+<rect x="1558.0625" y="656.9" width="42" height="43.6" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1558.0625" y1="678.9" x2="1600.0625" y2="678.9" stroke="#17232d" stroke-width="2"/>
+<text x="1579.0625" y="783" text-anchor="middle" class="sample">HC7</text>
+<line x1="1679.6875" y1="585.0" x2="1679.6875" y2="749.2" stroke="#d4773c" stroke-width="2"/>
+<line x1="1669.1875" y1="585.0" x2="1690.1875" y2="585.0" stroke="#d4773c" stroke-width="2"/>
+<line x1="1669.1875" y1="749.2" x2="1690.1875" y2="749.2" stroke="#d4773c" stroke-width="2"/>
+<rect x="1658.6875" y="655.1" width="42" height="46.8" fill="#d4773c" fill-opacity=".72" stroke="#d4773c"/>
+<line x1="1658.6875" y1="679.1" x2="1700.6875" y2="679.1" stroke="#17232d" stroke-width="2"/>
+<text x="1679.6875" y="783" text-anchor="middle" class="sample">HC8</text>
+<rect x="484.5" y="797" width="12" height="12" rx="2" fill="#3977a8"/>
+<text x="502.5" y="807" class="group">Ex vivo</text>
+<rect x="1289.5" y="797" width="12" height="12" rx="2" fill="#d4773c"/>
+<text x="1307.5" y="807" class="group">3 h LPS</text>
+<line x1="925.0" y1="515" x2="925.0" y2="790" stroke="#9aa8b4" stroke-dasharray="4 4"/>
+<text x="120" y="887" class="axis">Whiskers extend to the most extreme values within 1.5 × IQR; outliers are omitted.</text>
+</svg>
