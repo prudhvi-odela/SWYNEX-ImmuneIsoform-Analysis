@@ -42,3 +42,11 @@ Develop a reproducible bioinformatics workflow to investigate how immune activat
 
 ## Dataset source
 https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE297994
+
+## Task 3 — Visualization and interpretation (2026-11-01)
+- Inspected and used the Task 2 cleaned short-read and native long-read raw-count tables, the existing `metadata/sample_metadata.tsv`, and `results/task2_data_summary.json` as validation context. Salmon abundance tables were kept separate from raw counts and were not plotted.
+- Added `scripts/visualize_task3.py`, a Python 3.9+ standard-library script that maps sample columns to existing metadata and computes raw-count totals and the number of nonzero rows per sample.
+- Added separate SVG sample-summary figures for short-read (16 samples) and native long-read (6 samples), plus the machine-readable per-sample metrics TSV.
+- The figures show descriptive raw-count totals and nonzero-row counts only. No normalization, statistical testing, differential expression, isoform switching analysis, or biological conclusions were performed.
+- Task 3 methods, observed ranges, interpretation boundaries, and limitations are documented in `docs/task3_visualization_interpretation.md`.
+- Execution note: this environment had no installed Python interpreter, so the committed figure and metrics outputs were generated directly from the same checked-in tables and metadata with a local runtime. The Python script is provided for reproducible regeneration where Python 3.9+ is installed; it could not be executed here.
