@@ -49,4 +49,6 @@ https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE297994
 - Added separate SVG sample-summary figures for short-read (16 samples) and native long-read (6 samples), plus the machine-readable per-sample metrics TSV.
 - The figures show descriptive raw-count totals and nonzero-row counts only. No normalization, statistical testing, differential expression, isoform switching analysis, or biological conclusions were performed.
 - Task 3 methods, observed ranges, interpretation boundaries, and limitations are documented in `docs/task3_visualization_interpretation.md`.
-- Ran `scripts/visualize_task3.py` with Python 3.12.14 and regenerated both SVG figures and the per-sample TSV from the checked-in tables and metadata.
+- Ran `scripts/visualize_task3.py` with Python 3.12.14 and regenerated the SVG figures and per-sample TSV from the checked-in tables and metadata.
+- Revised Task 3 visuals after review: grouped condition bars, consistent condition colors, readable donor labels, and tidy axis intervals; long-read samples are condition-grouped.
+- Added a paired short-read top-100 gene-count share figure. In the source matrix, the per-sample top-100 share is 24.9–32.0% ex vivo and 42.6–50.8% after LPS; all eight donor pairs are higher in LPS. This is a descriptive composition pattern, not a differential-expression result, and it flags a normalization consideration for later analysis.

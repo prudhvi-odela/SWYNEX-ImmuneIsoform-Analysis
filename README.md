@@ -158,11 +158,11 @@ The workflow ran on all four processed tables. LinkedIn post: [Task 2 project up
 
 ## Task 3 — Visualization and interpretation
 
-Task 3 adds descriptive sample-level charts from the cleaned short-read and native long-read raw-count matrices. Each figure shows per-sample total raw counts and the number of rows with a count greater than zero, with condition and donor labels from the existing metadata. The two sequencing technologies remain separate; these plots are not normalized comparisons or differential analyses.
+Task 3 includes separate short-read and native long-read sample-summary figures for total raw counts and nonzero rows, plus a paired short-read comparison of the fraction of counts represented by each sample's top 100 genes. In these eight donor pairs, that fraction is higher in every LPS sample (42.6–50.8%) than in its ex vivo counterpart (24.9–32.0%). This descriptive composition pattern cautions that total-count depth scaling may be sensitive to condition-associated composition differences; it is not a differential-expression result. The two sequencing technologies remain separate.
 
 - [Task 3 methods, figure explanations, observations, and limitations](docs/task3_visualization_interpretation.md)
 - [Reproducible visualization script](scripts/visualize_task3.py) (Python 3.9+, standard library only)
-- Figures: [`short_read_sample_summary.svg`](results/figures/short_read_sample_summary.svg), [`long_read_sample_summary.svg`](results/figures/long_read_sample_summary.svg)
-- [Per-sample metrics](results/task3_sample_metrics.tsv)
+- Figures: [`short_read_sample_summary.svg`](results/figures/short_read_sample_summary.svg), [`long_read_sample_summary.svg`](results/figures/long_read_sample_summary.svg), [`short_read_top100_gene_share.svg`](results/figures/short_read_top100_gene_share.svg)
+- [Per-sample metrics, including top-100 count share](results/task3_sample_metrics.tsv)
 
 Regenerate the outputs from the repository root with `python scripts/visualize_task3.py`.
