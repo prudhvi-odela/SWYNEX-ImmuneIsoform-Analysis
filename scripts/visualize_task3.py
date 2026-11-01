@@ -54,9 +54,9 @@ def summarize(path: Path, technology: str, metadata: dict) -> list[dict]:
             for name, value in zip(header, row):
                 if name in sums:
                     number = float(value)
-                    if not math.isfinite(number) or number < 0:
+                    if not math.isfinite(number) or number < 0 or not number.is_integer():
                         raise ValueError(f"Invalid count in {path}: {value}")
-                    sums[name] += number
+                    sums[name] += int(number)
                     detected[name] += number > 0
     for column in sample_columns:
         match = re.search(r"HC(\d+)(exvivo|LPS)", column, re.I)

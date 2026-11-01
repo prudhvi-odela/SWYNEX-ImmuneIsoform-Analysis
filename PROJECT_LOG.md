@@ -49,4 +49,4 @@ https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE297994
 - Added separate SVG sample-summary figures for short-read (16 samples) and native long-read (6 samples), plus the machine-readable per-sample metrics TSV.
 - The figures show descriptive raw-count totals and nonzero-row counts only. No normalization, statistical testing, differential expression, isoform switching analysis, or biological conclusions were performed.
 - Task 3 methods, observed ranges, interpretation boundaries, and limitations are documented in `docs/task3_visualization_interpretation.md`.
-- Execution note: this environment had no installed Python interpreter, so the committed figure and metrics outputs were generated directly from the same checked-in tables and metadata with a local runtime. The Python script is provided for reproducible regeneration where Python 3.9+ is installed; it could not be executed here.
+- Ran `scripts/visualize_task3.py` with Python 3.12.14 and regenerated both SVG figures and the per-sample TSV from the checked-in tables and metadata.
