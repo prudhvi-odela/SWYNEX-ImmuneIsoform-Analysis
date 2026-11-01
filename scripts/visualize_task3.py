@@ -211,8 +211,8 @@ def svg_top100_chart(result: dict) -> str:
 
 def svg_boxplots(result: dict) -> str:
     rows = sorted(result["metrics"], key=lambda m: (m["condition"] != "ex_vivo", m["donor"]))
-    width, height = 1780, 900
-    left, right, plot_h = 120, 1730, 250
+    width, height = 1500, 900
+    left, right, plot_h = 100, 1400, 250
     panels = [("Expressed-feature CPM (log2 scale)", "cpm", 135),
               ("Median-of-ratios normalized counts (log2(count + 1))", "normalized", 515)]
     parts = svg_header(width, height, "Median-of-ratios normalization aligns short-read sample distributions",
@@ -357,10 +357,12 @@ def svg_pca(results: list[dict], pcas: list[dict]) -> str:
             parts.extend([f'<line x1="{xleft}" y1="{y:.1f}" x2="{xright}" y2="{y:.1f}" class="grid"/>',f'<text x="{xleft-10}" y="{y+4:.1f}" text-anchor="end" class="axis">{v:.0f}</text>'])
         parts.extend([f'<text x="{(xleft+xright)/2}" y="{ybottom+48}" text-anchor="middle" class="axis">PC1 ({coords["variance"][0]*100:.1f}% variance)</text>',
                       f'<text x="{x0+15}" y="{(ytop+ybottom)/2}" transform="rotate(-90 {x0+15} {(ytop+ybottom)/2})" text-anchor="middle" class="axis">PC2 ({coords["variance"][1]*100:.1f}% variance)</text>'])
+        label_offsets=((10,-10,"start"),(10,18,"start"),(-10,-10,"end"),(-10,18,"end"))
         for sample, score in zip(samples,coords["scores"]):
             x=xleft+(score[0]-xmin)/(xmax-xmin)*(xright-xleft); y=ybottom-(score[1]-ymin)/(ymax-ymin)*(ybottom-ytop)
             parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="7" fill="{COLORS[sample["condition"]]}" stroke="#fff" stroke-width="2"/>')
-            parts.append(f'<text x="{x+9:.1f}" y="{y-8:.1f}" class="sample">HC{sample["donor"]}</text>')
+            dx,dy,anchor=label_offsets[(sample["donor"]-1)%len(label_offsets)]
+            parts.append(f'<text x="{x+dx:.1f}" y="{y+dy:.1f}" text-anchor="{anchor}" class="sample">HC{sample["donor"]}</text>')
     parts.extend(['<circle cx="650" cy="735" r="7" fill="#3977a8"/><text x="665" y="740" class="axis">Ex vivo</text>',
                   '<circle cx="760" cy="735" r="7" fill="#d4773c"/><text x="775" y="740" class="axis">3 h LPS</text>',
                   '</svg>'])
