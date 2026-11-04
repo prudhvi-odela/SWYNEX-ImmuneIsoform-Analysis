@@ -55,3 +55,8 @@ https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE297994
 - Final figure polish: added an explicit condition legend to the paired top-100 chart, moved value labels clear of donor-pair connector lines, and placed larger donor labels with colored condition captions beneath both sample-summary panels.
 - Extended Task 3 with an expressed-feature CPM versus median-of-ratios boxplot, PCA on the 500 most variable CPM-filtered features, and Pearson correlation heatmaps on all CPM-filtered features. The current Task 3 report presents four figures; the earlier sample-summary-only figures were retired.
 - Verified the reported filter sizes and PCA variance from the cleaned tables: 12,428 short-read genes (PC1 95.45%) and 23,386 long-read transcript rows (PC1 94.86%). The short-read filtered-expressed CPM medians range 22.2–24.4 ex vivo versus 7.6–10.0 LPS; median normalized log2 values range 6.70–7.00. Long-read HC3 ex vivo correlations with HC1 and HC2 are 0.725 and 0.785; HC1–HC2 is 0.901. These are descriptive only.
+
+## Task 4 — Final Bioinformatics Report (2026-11-04)
+- Added `docs/task4_final_bioinformatics_report.md`, a consolidated report covering the research question, study design, Task 2–3 methods and results, interpretation boundaries, limitations, reproducibility, and references.
+- Clearly separated repository-generated descriptive observations from conclusions in the published GSE297994 study. No differential-expression or isoform-switching results are attributed to this repository.
+- Linked the report from `README.md`. No new analysis or result was generated for Task 4; the report synthesizes existing checked-in outputs and documentation.

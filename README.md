@@ -166,3 +166,9 @@ Task 3 now includes four descriptive figures: a paired top-100 count-share compa
 - [Per-sample metrics and normalization summaries](results/task3_sample_metrics.tsv)
 
 Regenerate the outputs from the repository root with `python scripts/visualize_task3.py`.
+
+## Task 4 — Final Bioinformatics Report
+
+The final report brings together the dataset, methods, and descriptive findings from Tasks 1–3. It separates this repository's results from findings reported by the original study and explains the limits of the current analyses.
+
+- [Task 4 final bioinformatics report](docs/task4_final_bioinformatics_report.md)
